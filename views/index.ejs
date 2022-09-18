@@ -1,7 +1,5 @@
-<%- include('partials/head', {title :'Sign-Up'}) %>
-<%- include('partials/header') -%>
-
-
+<%- include('partials/head', {title :'--- Weight Tracker 3000 ---'}) %>
+<%- include('partials/header') %>
   <body>
     <div class="login-page">
       <div class="form">
@@ -10,7 +8,9 @@
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Password" />
           <input type="password" name="confirmPassword" placeholder="Confirm Password"/>
-          <input type="department" name="department" placeholder="What is your current department?"/>
+          <input type="initialWeight" name="initialWeight" placeholder="What is your current Weight?"/>
+          <input type="goalWeight" name="goalWeight" placeholder="What is your Goal Weight?"/>
+          <input type="age" name="age" placeholder="How old are you?" />
           <button>Submit</button>
           <p class="message">Already registered? <a>Sign In</a></p>
         </form>
@@ -28,5 +28,3 @@
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
-
-<%- include('partials/footer') -%>
