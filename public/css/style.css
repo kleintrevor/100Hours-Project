@@ -1,0 +1,11 @@
+
+
+/* Generate grid  */
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 1px;
+        grid-row-gap: 1px;
+        }
