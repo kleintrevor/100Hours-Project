@@ -1,4 +1,4 @@
-<%- include('partials/head', {title :'--- Weight Tracker 3000 ---'}) %>
+<%- include('partials/head', {title :'--- MoD Login ---'}) %>
 <%- include('partials/header') %>
   <body>
     <div class="login-page">
@@ -8,9 +8,10 @@
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Password" />
           <input type="password" name="confirmPassword" placeholder="Confirm Password"/>
-          <input type="initialWeight" name="initialWeight" placeholder="What is your current Weight?"/>
-          <input type="goalWeight" name="goalWeight" placeholder="What is your Goal Weight?"/>
-          <input type="age" name="age" placeholder="How old are you?" />
+          <input type="initialDepartment" name="initialDepartment" placeholder="What is your current department?"/>  
+          <!-- update variable in routes and js
+          Should department selection be a selection dialog?? 
+          Pro: Prevent invalid input | Simplify for user? -->
           <button>Submit</button>
           <p class="message">Already registered? <a>Sign In</a></p>
         </form>
