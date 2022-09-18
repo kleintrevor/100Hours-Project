@@ -11,6 +11,15 @@ ul > li {
   max-width: 100%;
   height: 10%;
 }
+/* grid set up for html */
+.parent {
+  background: #000000;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  }
 
 .nav{
   width: 50%;
