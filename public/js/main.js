@@ -3,7 +3,7 @@ const weightItem = document.querySelectorAll('span.not');
 const weightComplete = document.querySelectorAll('span.completed');
 
 Array.from(cells).forEach((el) => {
-  el.addEventListener('click', deleteWeight);
+  el.addEventListener('click', deletePulseCheck);
 });
 
 // Array.from(weightItem).forEach((el) => {
@@ -14,10 +14,10 @@ Array.from(cells).forEach((el) => {
 //   el.addEventListener('click', markIncomplete);
 // });
 
-async function deleteWeight() {
+async function deletePulseCheck() {
   const weightId = this.dataset.id;
   try {
-    const response = await fetch('weights/deleteWeight', {
+    const response = await fetch('pulseCheck/deletePulseCheck', {
       method: 'delete',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify({
@@ -35,7 +35,7 @@ async function deleteWeight() {
 async function markComplete() {
   const weightId = this.parentNode.dataset.id;
   try {
-    const response = await fetch('weights/markComplete', {
+    const response = await fetch('pulseCheck/markComplete', {
       method: 'put',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify({
@@ -53,11 +53,11 @@ async function markComplete() {
 async function markIncomplete() {
   const weightId = this.parentNode.dataset.id;
   try {
-    const response = await fetch('weights/markIncomplete', {
+    const response = await fetch('pulseCheck/markIncomplete', {
       method: 'put',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify({
-        weightIdFromJSFile: weightId,
+        pulseCheckIdFromJSFile: pulseCheckId,
       }),
     });
     const data = await response.json();
