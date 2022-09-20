@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const WeightSchema = new mongoose.Schema({
+const PulseCheckSchema = new mongoose.Schema({
   currentWeight: {
     type: Number,
     required: true,
@@ -15,4 +15,4 @@ const WeightSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Weight', WeightSchema);
+module.exports = mongoose.model('PulseCheck', PulseCheckSchema);

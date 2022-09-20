@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const weightsController = require('../controllers/weights');
+const pulseCheckController = require('../controllers/weights');
 const { ensureAuth } = require('../middleware/auth');
 
-router.get('/', ensureAuth, weightsController.getWeights);
+router.get('/', ensureAuth, pulseCheckController.getPulseChecks);
 
-router.post('/createWeight', weightsController.createWeight);
+router.post('/createWeight', pulseCheckController.createPulseCheck);
 
-router.put('/markComplete', weightsController.markComplete);
+router.put('/markComplete', pulseCheckController.markComplete);
 
-router.put('/markIncomplete', weightsController.markIncomplete);
+router.put('/markIncomplete', pulseCheckController.markIncomplete);
 
-router.delete('/deleteWeight', weightsController.deleteWeight);
+router.delete('/deleteWeight', pulseCheckController.deletePulseCheck);
 
 module.exports = router;
