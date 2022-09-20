@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const pulseCheckController = require('../controllers/weights');
+const pulseCheckController = require('../controllers/pulseCheck');
 const { ensureAuth } = require('../middleware/auth');
 
 router.get('/', ensureAuth, pulseCheckController.getPulseChecks);

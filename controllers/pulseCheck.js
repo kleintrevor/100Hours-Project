@@ -4,10 +4,10 @@ module.exports = {
   getPulseChecks: async (req, res) => {
     console.log(req.user);
     try {
-      const weights = await PulseCheck.find({ userId: req.user.id });
-      console.log(weights);
+      const pulseCheck = await PulseCheck.find({ userId: req.user.id });
+      console.log(pulseCheck);
       res.render('pulseCheck.ejs', {
-        weights: weights,
+        pulseCheck: pulseCheck,
         user: req.user,
       });
     } catch (err) {
@@ -17,7 +17,7 @@ module.exports = {
   createPulseCheck: async (req, res) => {
     try {
       await PulseCheck.create({
-        currentWeight: req.body.weightItem,
+        currentpulseCheck: req.body.pulseCheckItem,
         userId: req.user.id,
         date: req.body.date,
       });
@@ -29,8 +29,8 @@ module.exports = {
   },
   markComplete: async (req, res) => {
     try {
-      await Weight.findOneAndUpdate(
-        { _id: req.body.weightIdFromJSFile },
+      await PulseCheck.findOneAndUpdate(
+        { _id: req.body.pulseCheckIdFromJSFile },
         {
           completed: true,
         }
@@ -43,8 +43,8 @@ module.exports = {
   },
   markIncomplete: async (req, res) => {
     try {
-      await Weight.findOneAndUpdate(
-        { _id: req.body.weightIdFromJSFile },
+      await PulseCheck.findOneAndUpdate(
+        { _id: req.body.pulseCheckIdFromJSFile },
         {
           completed: false,
         }
@@ -56,9 +56,9 @@ module.exports = {
     }
   },
   deletePulseCheck: async (req, res) => {
-    console.log(req.body.weightIdFromJSFile);
+    console.log(req.body.pulseCheckIdFromJSFile);
     try {
-      await PulseCheck.findOneAndDelete({ _id: req.body.weightIdFromJSFile });
+      await PulseCheck.findOneAndDelete({ _id: req.body.pulseCheckIdFromJSFile });
       console.log('Deleted weight');
       res.json('Deleted It');
     } catch (err) {
