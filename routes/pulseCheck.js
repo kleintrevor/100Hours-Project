@@ -5,12 +5,12 @@ const { ensureAuth } = require('../middleware/auth');
 
 router.get('/', ensureAuth, pulseCheckController.getPulseChecks);
 
-router.post('/createWeight', pulseCheckController.createPulseCheck);
+router.post('/createPulseCheck', pulseCheckController.createPulseCheck);
 
 router.put('/markComplete', pulseCheckController.markComplete);
 
 router.put('/markIncomplete', pulseCheckController.markIncomplete);
 
-router.delete('/deleteWeight', pulseCheckController.deletePulseCheck);
+router.delete('/deletePulseCheck', pulseCheckController.deletePulseCheck);
 
 module.exports = router;
