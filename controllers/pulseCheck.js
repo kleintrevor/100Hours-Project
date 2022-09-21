@@ -9,6 +9,7 @@ module.exports = {
       res.render('pulseCheck.ejs', {
         pulseCheck: pulseCheck,
         user: req.user,
+        title : 'Department Pulse Check Entry',
       });
     } catch (err) {
       console.log(err);
