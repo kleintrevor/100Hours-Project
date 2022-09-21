@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const PulseCheckSchema = new mongoose.Schema({
-  currentWeight: {
+  currentpulseCheck: {
     type: Number,
     required: true,
   },

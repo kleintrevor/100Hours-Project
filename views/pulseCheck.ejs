@@ -5,27 +5,27 @@
     <% if (user) { %>
         <h1>Hello <%= user.userName %>, </h1>
       <% } %>
-  <!-- <form class="weight" action="/pulseCheck/createWeight" method='POST'>
-        <label>Please enter your weight for:</label>
+  <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
+        <label>Please enter select todays date below:</label>
             <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
-        <label>Enter your current weight</label>
-            <input class="lbs" type="text" placeholder="lbs" name='weightItem'>
+        <label>Enter your current staffing levels:</label>
+            <input class="staffing" type="text" placeholder="Staffing" name='pulseCheckItem'>
         
         <input type="submit">
-    </form> -->
+    </form>
 
-    <!-- <div class="mt-lg">
+    <div class="mt-lg">
     <h5>Your current tracked weights</h5>
     <ul class="tracked-weights">
-        <% weights.forEach( el => { %> 
+        <% pulseCheck.forEach( el => { %> 
                 <li class='cell' data-id='<%=el._id%>'>-->
-                    <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentWeight %></span> -->
-                    <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span> -->
-                    <!-- <span class='del'> Delete </span> -->
-                <!-- </li>
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentpulseCheck %></span> -->
+                    <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span>
+                    <span class='del'> Delete </span>
+                 </li>
         <% }) %>    
     </ul>
-    </div> -->
+    </div>
   
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
