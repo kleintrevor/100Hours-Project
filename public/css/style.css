@@ -188,7 +188,7 @@ ul > li {
   background: rgb(51, 0, 51);
   display: grid;
   grid-template-columns: 0.35fr repeat(14, 0.20fr);
-  grid-template-rows: repeat(11, 0.25fr);
+  grid-template-rows: repeat(11, 0.30fr);
   grid-column-gap: 1px;
   grid-row-gap: 1px;
 }
@@ -371,7 +371,7 @@ ul > li {
   background: rgb(0, 66, 57);
   display: grid;
   grid-template-columns: repeat(4, 0.25fr);
-  grid-template-rows: repeat(8, 0.25fr);
+  grid-template-rows: repeat(8, 0.30fr);
   grid-column-gap: 1px;
   grid-row-gap: 1px;
 }

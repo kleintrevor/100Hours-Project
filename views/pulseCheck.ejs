@@ -3,7 +3,7 @@
 
 <body>
     <% if (user) { %>
-        <h1>Hello <%= user.userName %>, </h1>
+        <h3>Hello <%= user.userName %>, please enter the pulse check data for the <%= user.department %> department:</h3>
       <% } %>
   <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
         <label>Please enter select todays date below:</label>
