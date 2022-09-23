@@ -25,10 +25,12 @@ ul > li {
   background: rgb(0, 95, 0);;
   color: white;
 }
+
 .actual{
   background: rgb(163, 163, 163);
   color: black;
 }
+
 .container1 {
   position: relative;
   z-index: 1;
@@ -588,7 +590,7 @@ input[type=text], select {
   color: #ef3b3a;
 }
 
-#department {
+select {
   height: 26px;
   width: 120px; 
   padding: 0px; 
@@ -596,6 +598,15 @@ input[type=text], select {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+input[type=checkbox]{
+  flex: none;
 }
 
 body {

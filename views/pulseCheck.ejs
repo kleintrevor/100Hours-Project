@@ -27,6 +27,39 @@
         </ul>
     </div>
   
+    <div class="departmentInput">
+        <h3>Trial Data Input area for each department</h3>
+        <form action="/" method="POST">
+          <div class="form-group mb-3">
+            <label>What Complex are you on?</label>
+            <select name="complex" id="complex"  >
+                <option value="6:00 AM">6:00 AM</option>
+                <option value="8:00 AM">8:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+              </select> 
+              <div class="form-group mb-3">
+                <label>Trucks in Service at the moment:</label>
+                <input type="text" class="form-control" placeholder="# Trucks in service" name="Trucksinservice">
+              </div>
+              <label for="c1"><input type="checkbox" name="checkpoints" value="red" id="c1">Supply Room Delivery</label>
+              <label for="c2"><input type="checkbox" name="checkpoints" value="green" id="c2">501 Warehouse Delivery</label>
+              <label for="c3"><input type="checkbox" name="checkpoints" value="blue" id="c3">Icer</label>
+              <label for="c4"><input type="checkbox" name="checkpoints" value="red" id="c4">Flight Checker</label>
+              <label for="c5"><input type="checkbox" name="checkpoints" value="green" id="c5">QCP</label>
+              <label for="c6"><input type="checkbox" name="checkpoints" value="blue" id="c6">M&P IDS</label>
+              <label for="c7"><input type="checkbox" name="checkpoints" value="green" id="c7">Supply Truck</label>
+              <label for="c8"><input type="checkbox" name="checkpoints" value="blue" id="c8">Ramp Exchange Truck</label>
+              <label for="c9"><input type="checkbox" name="checkpoints" value="red" id="c9">Temp Check Ice Trailer</label>
+              <label for="c10"><input type="checkbox" name="checkpoints" value="green" id="c10">Temp Check Coolers</label>
+          </div>
+          <div class="d-grid mt-3">
+          <button type="submit" class="btn btn-danger">Submit</button>
+          </div>
+        </form>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
