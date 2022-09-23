@@ -9,7 +9,7 @@ This allows will effectively a lot an additional 30 minutes of availability on t
 
 <h2>Things to add in the future:</h2>
 
-sort output by department for display on grid
-set up database schema for each department
-polish DOM
+- sort output by department for display on grid
+- set up database schema for each department
+- polish DOM
 
