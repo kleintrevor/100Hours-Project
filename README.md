@@ -12,4 +12,5 @@ This allows will effectively allow an additional 30 minutes of availability on t
 - sort output by department for display on grid
 - set up database schema for each department
 - polish DOM
+- role authentication based on department of user
 
