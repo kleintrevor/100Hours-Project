@@ -4,13 +4,13 @@
 <body>
     <h4>Attendance</h4>
 
-    <section class="parent3">
-        <div id="div501">AM Staffing</div> <!-- AM Staffing Header -->
-        <div id="div502">PM Staffing</div> <!-- PM Staffing Header -->
-        <div id="div503">Target</div>      <!-- Target -->
-        <div id="div504">Actual</div>      <!-- Actual -->
-        <div id="div505">Target</div>      <!-- Target -->
-        <div id="div506">Actual</div>      <!-- Actual -->
+    <section id="attendance">
+        <div id="div501" class="amShift">AM Staffing</div> <!-- AM Staffing Header -->
+        <div id="div502" class="pmShift">PM Staffing</div> <!-- PM Staffing Header -->
+        <div id="div503" class="target">Target</div>      <!-- Target -->
+        <div id="div504" class="actual">Actual</div>      <!-- Actual -->
+        <div id="div505" class="target">Target</div>      <!-- Target -->
+        <div id="div506" class="actual">Actual</div>      <!-- Actual -->
         <div id="div507" class="col_green"> </div>  <!-- first column -->   <!-- GREEN column -->
         <div id="div508" class="col_white"> </div>
         <div id="div509" class="col_green"> </div>
@@ -39,30 +39,30 @@
 
     <h4> Departmental Updates</h4>
 
-    <section class="parent">
-        <div id="div1"> <%= moment().format('Do MMMM, YYYY'); %> </div>  <!-- first column -->
-        <div id="div2">6:00 AM</div>  <!-- Pulse Check time-->
-        <div id="div3">8:00 AM</div>  <!-- Pulse Check time-->
-        <div id="div4">11:00 AM</div>  <!-- Pulse Check time-->
-        <div id="div5">1:00 PM</div>  <!-- Pulse Check time-->
-        <div id="div6">4:00 PM</div>  <!-- Pulse Check time-->
-        <div id="div7">7:00 PM</div>  <!-- Pulse Check time-->
-        <div id="div8">10:00 PM</div>  <!-- Pulse Check time-->
+    <section id="departments">
+        <div id="div1"> <%= moment().format('MM/DD/YY'); %> </div>  <!-- first column -->
+        <div id="div2" class="amShift">6:00 AM</div>  <!-- Pulse Check time-->
+        <div id="div3" class="amShift">8:00 AM</div>  <!-- Pulse Check time-->
+        <div id="div4" class="amShift">11:00 AM</div>  <!-- Pulse Check time-->
+        <div id="div5" class="amShift">1:00 PM</div>  <!-- Pulse Check time-->
+        <div id="div6" class="pmShift">4:00 PM</div>  <!-- Pulse Check time-->
+        <div id="div7" class="pmShift">7:00 PM</div>  <!-- Pulse Check time-->
+        <div id="div8" class="pmShift">10:00 PM</div>  <!-- Pulse Check time-->
         <div id="div9"></div>  <!-- first column -->
-        <div id="div10">Target</div>  <!-- GREEN column -->
-        <div id="div11">Actual</div>
-        <div id="div12">Target</div>
-        <div id="div13">Actual</div>
-        <div id="div14">Target</div>
-        <div id="div15">Actual</div>
-        <div id="div16">Target</div>
-        <div id="div17">Actual</div>
-        <div id="div18">Target</div>
-        <div id="div19">Actual</div>
-        <div id="div20">Target</div>
-        <div id="div21">Actual</div>
-        <div id="div22">Target</div>
-        <div id="div23">Actual</div>
+        <div id="div10" class="target">Target</div>  <!-- GREEN column -->
+        <div id="div11" class="actual">Actual</div>
+        <div id="div12" class="target">Target</div>
+        <div id="div13" class="actual">Actual</div>
+        <div id="div14" class="target">Target</div>
+        <div id="div15" class="actual">Actual</div>
+        <div id="div16" class="target">Target</div>
+        <div id="div17" class="actual">Actual</div>
+        <div id="div18" class="target">Target</div>
+        <div id="div19" class="actual">Actual</div>
+        <div id="div20" class="target">Target</div>
+        <div id="div21" class="actual">Actual</div>
+        <div id="div22" class="target">Target</div>
+        <div id="div23" class="actual">Actual</div>
         <div id="div24"> Dock </div>  <!-- first column -->
         <div id="div25" class="col_green"> </div>  <!-- GREEN column -->
         <div id="div26" class="col_white"> </div>
@@ -157,7 +157,7 @@
 
 <h4>Check Points</h4>
 
-    <section class="parent2">
+    <section id="checkPoints">
         <div id="div201">Supply Room Delivery</div>  <!-- first column -->
         <div id="div202" class="col_green"> </div>  <!-- GREEN column -->
         <div id="div203" class="col_white"> </div>
