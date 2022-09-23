@@ -42,6 +42,8 @@ ul > li {
 
 .col_white{
   background: rgb(163, 163, 163);
+  color: black;
+  text-align: center;
 }
 
 /* grid set up begin*/
