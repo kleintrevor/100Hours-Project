@@ -59,8 +59,7 @@ ul > li {
   grid-template-rows: repeat(8, 0.25fr);
   grid-column-gap: 1px;
   grid-row-gap: 1px;
-  
-  }    
+}    
 
 #div1 { grid-area: 1 / 1 / 2 / 2; }
 #div2 { grid-area: 1 / 2 / 2 / 4; }
@@ -192,7 +191,7 @@ ul > li {
   grid-template-rows: repeat(11, 0.25fr);
   grid-column-gap: 1px;
   grid-row-gap: 1px;
-  }
+}
   
 #div201 { grid-area: 1 / 1 / 2 / 2; }
 #div202 { grid-area: 1 / 2 / 2 / 3; }
@@ -467,6 +466,7 @@ footer {
   padding: 8% 0 0;
   margin: auto;
 }
+
 .form {
   position: relative;
   z-index: 1;
@@ -477,6 +477,7 @@ footer {
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 input[type=date], select {
   width: 8%;
   padding: 6px 10px;
@@ -486,6 +487,7 @@ input[type=date], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 input[type=text], select {
   width: 8%;
   padding: 6px 10px;
@@ -507,6 +509,7 @@ input[type=text], select {
   box-sizing: border-box;
   font-size: 14px;
 }
+
 .form button {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -521,40 +524,48 @@ input[type=text], select {
   transition: all 0.3 ease;
   cursor: pointer;
 }
+
 .form button:hover,
 .form button:active,
 .form button:focus {
   background: #0466C8;
 }
+
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
+
 .form .message a {
   color: #0353A4;
   text-decoration: none;
   cursor: pointer;
 }
+
 .form .register-form {
   display: none;
 }
+
 .container {
   position: relative;
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
 }
+
 .container:before,
 .container:after {
   content: '';
   display: block;
   clear: both;
 }
+
 .container .info {
   margin: 50px auto;
   text-align: center;
 }
+
 .container .info h1 {
   margin: 0 0 15px;
   padding: 0;
@@ -562,14 +573,17 @@ input[type=text], select {
   font-weight: 300;
   color: #1a1a1a;
 }
+
 .container .info span {
   color: #4d4d4d;
   font-size: 12px;
 }
+
 .container .info span a {
   color: #000000;
   text-decoration: none;
 }
+
 .container .info span .fa {
   color: #ef3b3a;
 }
@@ -579,6 +593,9 @@ input[type=text], select {
   width: 120px; 
   padding: 0px; 
   margin: 0px 0px 10px 0px;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -601,6 +618,7 @@ body {
   gap: 0.2em;
   flex-wrap: wrap;
 }
+
 /* 
 .cell {
   width: 3em;
