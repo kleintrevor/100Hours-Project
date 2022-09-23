@@ -1,5 +1,10 @@
+var moment = require('moment');
+
 module.exports = {
   getFeed: (req, res) => {
-    res.render('feed.ejs', {title: "MoD Pulse Check Live Feed"});
+    res.render('feed.ejs', {
+      title: "MoD Pulse Check Live Feed",
+      moment: moment,
+    });
   },
 };
