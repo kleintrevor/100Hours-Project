@@ -1,3 +1,5 @@
+
+
 h1 {
   color: black;
 }
@@ -11,18 +13,29 @@ ul > li {
   max-width: 100%;
   height: 10%;
 }
+
+.col_green{
+  background: rgb(0, 95, 0);
+}
+
+.col_white{
+  background: rgb(163, 163, 163);
+}
+
 /* grid set up begin*/
 
 .parent {
   color: #ffffff;
   text-align: center;
   height: 20vh;
+  width: 80vw;
   background: #002855;
   display: grid;
-  grid-template-columns: 0.35fr repeat(14, 0.25fr);
+  grid-template-columns: 0.35fr repeat(14, 0.20fr);
   grid-template-rows: repeat(8, 0.25fr);
   grid-column-gap: 1px;
   grid-row-gap: 1px;
+  
   }    
 
 #div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -143,182 +156,185 @@ ul > li {
 
 
 /*  Grid lay out 2 start  */
-/* 
+
 .parent2 {
+  color: #ffffff;
+  text-align: center;
   height: 30vh;
+  width: 80vw;
   background: rgb(51, 0, 51);
   display: grid;
-  grid-template-columns: 0.75fr repeat(14, 0.5fr);
+  grid-template-columns: 0.35fr repeat(14, 0.20fr);
   grid-template-rows: repeat(11, 0.25fr);
   grid-column-gap: 1px;
   grid-row-gap: 1px;
   }
   
-#div1 { grid-area: 1 / 1 / 2 / 2; }
-#div2 { grid-area: 1 / 2 / 2 / 3; }
-#div3 { grid-area: 1 / 3 / 2 / 4; }
-#div4 { grid-area: 1 / 4 / 2 / 5; }
-#div5 { grid-area: 1 / 5 / 2 / 6; }
-#div6 { grid-area: 1 / 6 / 2 / 7; }
-#div7 { grid-area: 1 / 7 / 2 / 8; }
-#div8 { grid-area: 1 / 8 / 2 / 9; }
-#div9 { grid-area: 1 / 9 / 2 / 10; }
-#div10 { grid-area: 1 / 10 / 2 / 11; }
-#div11 { grid-area: 1 / 11 / 2 / 12; }
-#div12 { grid-area: 1 / 12 / 2 / 13; }
-#div13 { grid-area: 1 / 13 / 2 / 14; }
-#div14 { grid-area: 1 / 14 / 2 / 15; }
-#div15 { grid-area: 1 / 15 / 2 / 16; }
-#div16 { grid-area: 2 / 1 / 3 / 2; }
-#div17 { grid-area: 2 / 2 / 3 / 3; }
-#div18 { grid-area: 2 / 3 / 3 / 4; }
-#div19 { grid-area: 2 / 4 / 3 / 5; }
-#div20 { grid-area: 2 / 5 / 3 / 6; }
-#div21 { grid-area: 2 / 6 / 3 / 7; }
-#div22 { grid-area: 2 / 7 / 3 / 8; }
-#div23 { grid-area: 2 / 8 / 3 / 9; }
-#div24 { grid-area: 2 / 9 / 3 / 10; }
-#div25 { grid-area: 2 / 10 / 3 / 11; }
-#div26 { grid-area: 2 / 11 / 3 / 12; }
-#div27 { grid-area: 2 / 12 / 3 / 13; }
-#div28 { grid-area: 2 / 13 / 3 / 14; }
-#div29 { grid-area: 2 / 14 / 3 / 15; }
-#div30 { grid-area: 2 / 15 / 3 / 16; }
-#div31 { grid-area: 3 / 1 / 4 / 2; }
-#div32 { grid-area: 3 / 2 / 4 / 3; }
-#div33 { grid-area: 3 / 3 / 4 / 4; }
-#div34 { grid-area: 3 / 4 / 4 / 5; }
-#div35 { grid-area: 3 / 5 / 4 / 6; }
-#div36 { grid-area: 3 / 6 / 4 / 7; }
-#div37 { grid-area: 3 / 7 / 4 / 8; }
-#div38 { grid-area: 3 / 8 / 4 / 9; }
-#div39 { grid-area: 3 / 9 / 4 / 10; }
-#div40 { grid-area: 3 / 10 / 4 / 11; }
-#div41 { grid-area: 3 / 11 / 4 / 12; }
-#div42 { grid-area: 3 / 12 / 4 / 13; }
-#div43 { grid-area: 3 / 13 / 4 / 14; }
-#div44 { grid-area: 3 / 14 / 4 / 15; }
-#div45 { grid-area: 3 / 15 / 4 / 16; }
-#div46 { grid-area: 4 / 1 / 5 / 2; }
-#div47 { grid-area: 4 / 2 / 5 / 3; }
-#div48 { grid-area: 4 / 3 / 5 / 4; }
-#div49 { grid-area: 4 / 4 / 5 / 5; }
-#div50 { grid-area: 4 / 5 / 5 / 6; }
-#div51 { grid-area: 4 / 6 / 5 / 7; }
-#div52 { grid-area: 4 / 7 / 5 / 8; }
-#div53 { grid-area: 4 / 8 / 5 / 9; }
-#div54 { grid-area: 4 / 9 / 5 / 10; }
-#div55 { grid-area: 4 / 10 / 5 / 11; }
-#div56 { grid-area: 4 / 11 / 5 / 12; }
-#div57 { grid-area: 4 / 12 / 5 / 13; }
-#div58 { grid-area: 4 / 13 / 5 / 14; }
-#div59 { grid-area: 4 / 14 / 5 / 15; }
-#div60 { grid-area: 4 / 15 / 5 / 16; }
-#div61 { grid-area: 5 / 1 / 6 / 2; }
-#div62 { grid-area: 5 / 2 / 6 / 3; }
-#div63 { grid-area: 5 / 3 / 6 / 4; }
-#div64 { grid-area: 5 / 4 / 6 / 5; }
-#div65 { grid-area: 5 / 5 / 6 / 6; }
-#div66 { grid-area: 5 / 6 / 6 / 7; }
-#div67 { grid-area: 5 / 7 / 6 / 8; }
-#div68 { grid-area: 5 / 8 / 6 / 9; }
-#div69 { grid-area: 5 / 9 / 6 / 10; }
-#div70 { grid-area: 5 / 10 / 6 / 11; }
-#div71 { grid-area: 5 / 11 / 6 / 12; }
-#div72 { grid-area: 5 / 12 / 6 / 13; }
-#div73 { grid-area: 5 / 13 / 6 / 14; }
-#div74 { grid-area: 5 / 14 / 6 / 15; }
-#div75 { grid-area: 5 / 15 / 6 / 16; }
-#div76 { grid-area: 6 / 1 / 7 / 2; }
-#div77 { grid-area: 6 / 2 / 7 / 3; }
-#div78 { grid-area: 6 / 3 / 7 / 4; }
-#div79 { grid-area: 6 / 4 / 7 / 5; }
-#div80 { grid-area: 6 / 5 / 7 / 6; }
-#div81 { grid-area: 6 / 6 / 7 / 7; }
-#div82 { grid-area: 6 / 7 / 7 / 8; }
-#div83 { grid-area: 6 / 8 / 7 / 9; }
-#div84 { grid-area: 6 / 9 / 7 / 10; }
-#div85 { grid-area: 6 / 10 / 7 / 11; }
-#div86 { grid-area: 6 / 11 / 7 / 12; }
-#div87 { grid-area: 6 / 12 / 7 / 13; }
-#div88 { grid-area: 6 / 13 / 7 / 14; }
-#div89 { grid-area: 6 / 14 / 7 / 15; }
-#div90 { grid-area: 6 / 15 / 7 / 16; }
-#div91 { grid-area: 7 / 1 / 8 / 2; }
-#div92 { grid-area: 7 / 2 / 8 / 3; }
-#div93 { grid-area: 7 / 3 / 8 / 4; }
-#div94 { grid-area: 7 / 4 / 8 / 5; }
-#div95 { grid-area: 7 / 5 / 8 / 6; }
-#div96 { grid-area: 7 / 6 / 8 / 7; }
-#div97 { grid-area: 7 / 7 / 8 / 8; }
-#div98 { grid-area: 7 / 8 / 8 / 9; }
-#div99 { grid-area: 7 / 9 / 8 / 10; }
-#div100 { grid-area: 7 / 10 / 8 / 11; }
-#div101 { grid-area: 7 / 11 / 8 / 12; }
-#div102 { grid-area: 7 / 12 / 8 / 13; }
-#div103 { grid-area: 7 / 13 / 8 / 14; }
-#div104 { grid-area: 7 / 14 / 8 / 15; }
-#div105 { grid-area: 7 / 15 / 8 / 16; }
-#div106 { grid-area: 8 / 1 / 9 / 2; }
-#div107 { grid-area: 8 / 2 / 9 / 3; }
-#div108 { grid-area: 8 / 3 / 9 / 4; }
-#div109 { grid-area: 8 / 4 / 9 / 5; }
-#div110 { grid-area: 8 / 5 / 9 / 6; }
-#div111 { grid-area: 8 / 6 / 9 / 7; }
-#div112 { grid-area: 8 / 7 / 9 / 8; }
-#div113 { grid-area: 8 / 8 / 9 / 9; }
-#div114 { grid-area: 8 / 9 / 9 / 10; }
-#div115 { grid-area: 8 / 10 / 9 / 11; }
-#div116 { grid-area: 8 / 11 / 9 / 12; }
-#div117 { grid-area: 8 / 12 / 9 / 13; }
-#div118 { grid-area: 8 / 13 / 9 / 14; }
-#div119 { grid-area: 8 / 14 / 9 / 15; }
-#div120 { grid-area: 8 / 15 / 9 / 16; }
-#div121 { grid-area: 9 / 1 / 10 / 2; }
-#div122 { grid-area: 9 / 2 / 10 / 3; }
-#div123 { grid-area: 9 / 3 / 10 / 4; }
-#div124 { grid-area: 9 / 4 / 10 / 5; }
-#div125 { grid-area: 9 / 5 / 10 / 6; }
-#div126 { grid-area: 9 / 6 / 10 / 7; }
-#div127 { grid-area: 9 / 7 / 10 / 8; }
-#div128 { grid-area: 9 / 8 / 10 / 9; }
-#div129 { grid-area: 9 / 9 / 10 / 10; }
-#div130 { grid-area: 9 / 10 / 10 / 11; }
-#div131 { grid-area: 9 / 11 / 10 / 12; }
-#div132 { grid-area: 9 / 12 / 10 / 13; }
-#div133 { grid-area: 9 / 13 / 10 / 14; }
-#div134 { grid-area: 9 / 14 / 10 / 15; }
-#div135 { grid-area: 9 / 15 / 10 / 16; }
-#div136 { grid-area: 10 / 1 / 11 / 2; }
-#div137 { grid-area: 10 / 2 / 11 / 3; }
-#div138 { grid-area: 10 / 3 / 11 / 4; }
-#div139 { grid-area: 10 / 4 / 11 / 5; }
-#div140 { grid-area: 10 / 5 / 11 / 6; }
-#div141 { grid-area: 10 / 6 / 11 / 7; }
-#div142 { grid-area: 10 / 7 / 11 / 8; }
-#div143 { grid-area: 10 / 8 / 11 / 9; }
-#div144 { grid-area: 10 / 9 / 11 / 10; }
-#div145 { grid-area: 10 / 10 / 11 / 11; }
-#div146 { grid-area: 10 / 11 / 11 / 12; }
-#div147 { grid-area: 10 / 12 / 11 / 13; }
-#div148 { grid-area: 10 / 13 / 11 / 14; }
-#div149 { grid-area: 10 / 14 / 11 / 15; }
-#div150 { grid-area: 10 / 15 / 11 / 16; }
-#div151 { grid-area: 11 / 1 / 12 / 2; }
-#div152 { grid-area: 11 / 2 / 12 / 3; }
-#div153 { grid-area: 11 / 3 / 12 / 4; }
-#div154 { grid-area: 11 / 4 / 12 / 5; }
-#div155 { grid-area: 11 / 5 / 12 / 6; }
-#div156 { grid-area: 11 / 6 / 12 / 7; }
-#div157 { grid-area: 11 / 7 / 12 / 8; }
-#div158 { grid-area: 11 / 8 / 12 / 9; }
-#div159 { grid-area: 11 / 9 / 12 / 10; }
-#div160 { grid-area: 11 / 10 / 12 / 11; }
-#div161 { grid-area: 11 / 11 / 12 / 12; }
-#div162 { grid-area: 11 / 12 / 12 / 13; }
-#div163 { grid-area: 11 / 13 / 12 / 14; }
-#div164 { grid-area: 11 / 14 / 12 / 15; }
-#div165 { grid-area: 11 / 15 / 12 / 16; } */
+#div201 { grid-area: 1 / 1 / 2 / 2; }
+#div202 { grid-area: 1 / 2 / 2 / 3; }
+#div203 { grid-area: 1 / 3 / 2 / 4; }
+#div204 { grid-area: 1 / 4 / 2 / 5; }
+#div205 { grid-area: 1 / 5 / 2 / 6; }
+#div206 { grid-area: 1 / 6 / 2 / 7; }
+#div207 { grid-area: 1 / 7 / 2 / 8; }
+#div208 { grid-area: 1 / 8 / 2 / 9; }
+#div209 { grid-area: 1 / 9 / 2 / 10; }
+#div210 { grid-area: 1 / 10 / 2 / 11; }
+#div211 { grid-area: 1 / 11 / 2 / 12; }
+#div212 { grid-area: 1 / 12 / 2 / 13; }
+#div213 { grid-area: 1 / 13 / 2 / 14; }
+#div214 { grid-area: 1 / 14 / 2 / 15; }
+#div215 { grid-area: 1 / 15 / 2 / 16; }
+#div216 { grid-area: 2 / 1 / 3 / 2; }
+#div217 { grid-area: 2 / 2 / 3 / 3; }
+#div218 { grid-area: 2 / 3 / 3 / 4; }
+#div219 { grid-area: 2 / 4 / 3 / 5; }
+#div220 { grid-area: 2 / 5 / 3 / 6; }
+#div221 { grid-area: 2 / 6 / 3 / 7; }
+#div222 { grid-area: 2 / 7 / 3 / 8; }
+#div223 { grid-area: 2 / 8 / 3 / 9; }
+#div224 { grid-area: 2 / 9 / 3 / 10; }
+#div225 { grid-area: 2 / 10 / 3 / 11; }
+#div226 { grid-area: 2 / 11 / 3 / 12; }
+#div227 { grid-area: 2 / 12 / 3 / 13; }
+#div228 { grid-area: 2 / 13 / 3 / 14; }
+#div229 { grid-area: 2 / 14 / 3 / 15; }
+#div230 { grid-area: 2 / 15 / 3 / 16; }
+#div231 { grid-area: 3 / 1 / 4 / 2; }
+#div232 { grid-area: 3 / 2 / 4 / 3; }
+#div233 { grid-area: 3 / 3 / 4 / 4; }
+#div234 { grid-area: 3 / 4 / 4 / 5; }
+#div235 { grid-area: 3 / 5 / 4 / 6; }
+#div236 { grid-area: 3 / 6 / 4 / 7; }
+#div237 { grid-area: 3 / 7 / 4 / 8; }
+#div238 { grid-area: 3 / 8 / 4 / 9; }
+#div239 { grid-area: 3 / 9 / 4 / 10; }
+#div240 { grid-area: 3 / 10 / 4 / 11; }
+#div241 { grid-area: 3 / 11 / 4 / 12; }
+#div242 { grid-area: 3 / 12 / 4 / 13; }
+#div243 { grid-area: 3 / 13 / 4 / 14; }
+#div244 { grid-area: 3 / 14 / 4 / 15; }
+#div245 { grid-area: 3 / 15 / 4 / 16; }
+#div246 { grid-area: 4 / 1 / 5 / 2; }
+#div247 { grid-area: 4 / 2 / 5 / 3; }
+#div248 { grid-area: 4 / 3 / 5 / 4; }
+#div249 { grid-area: 4 / 4 / 5 / 5; }
+#div250 { grid-area: 4 / 5 / 5 / 6; }
+#div251 { grid-area: 4 / 6 / 5 / 7; }
+#div252 { grid-area: 4 / 7 / 5 / 8; }
+#div253 { grid-area: 4 / 8 / 5 / 9; }
+#div254 { grid-area: 4 / 9 / 5 / 10; }
+#div255 { grid-area: 4 / 10 / 5 / 11; }
+#div256 { grid-area: 4 / 11 / 5 / 12; }
+#div257 { grid-area: 4 / 12 / 5 / 13; }
+#div258 { grid-area: 4 / 13 / 5 / 14; }
+#div259 { grid-area: 4 / 14 / 5 / 15; }
+#div260 { grid-area: 4 / 15 / 5 / 16; }
+#div261 { grid-area: 5 / 1 / 6 / 2; }
+#div262 { grid-area: 5 / 2 / 6 / 3; }
+#div263 { grid-area: 5 / 3 / 6 / 4; }
+#div264 { grid-area: 5 / 4 / 6 / 5; }
+#div265 { grid-area: 5 / 5 / 6 / 6; }
+#div266 { grid-area: 5 / 6 / 6 / 7; }
+#div267 { grid-area: 5 / 7 / 6 / 8; }
+#div268 { grid-area: 5 / 8 / 6 / 9; }
+#div269 { grid-area: 5 / 9 / 6 / 10; }
+#div270 { grid-area: 5 / 10 / 6 / 11; }
+#div271 { grid-area: 5 / 11 / 6 / 12; }
+#div272 { grid-area: 5 / 12 / 6 / 13; }
+#div273 { grid-area: 5 / 13 / 6 / 14; }
+#div274 { grid-area: 5 / 14 / 6 / 15; }
+#div275 { grid-area: 5 / 15 / 6 / 16; }
+#div276 { grid-area: 6 / 1 / 7 / 2; }
+#div277 { grid-area: 6 / 2 / 7 / 3; }
+#div278 { grid-area: 6 / 3 / 7 / 4; }
+#div279 { grid-area: 6 / 4 / 7 / 5; }
+#div280 { grid-area: 6 / 5 / 7 / 6; }
+#div281 { grid-area: 6 / 6 / 7 / 7; }
+#div282 { grid-area: 6 / 7 / 7 / 8; }
+#div283 { grid-area: 6 / 8 / 7 / 9; }
+#div284 { grid-area: 6 / 9 / 7 / 10; }
+#div285 { grid-area: 6 / 10 / 7 / 11; }
+#div286 { grid-area: 6 / 11 / 7 / 12; }
+#div287 { grid-area: 6 / 12 / 7 / 13; }
+#div288 { grid-area: 6 / 13 / 7 / 14; }
+#div289 { grid-area: 6 / 14 / 7 / 15; }
+#div290 { grid-area: 6 / 15 / 7 / 16; }
+#div291 { grid-area: 7 / 1 / 8 / 2; }
+#div292 { grid-area: 7 / 2 / 8 / 3; }
+#div293 { grid-area: 7 / 3 / 8 / 4; }
+#div294 { grid-area: 7 / 4 / 8 / 5; }
+#div295 { grid-area: 7 / 5 / 8 / 6; }
+#div296 { grid-area: 7 / 6 / 8 / 7; }
+#div297 { grid-area: 7 / 7 / 8 / 8; }
+#div298 { grid-area: 7 / 8 / 8 / 9; }
+#div299 { grid-area: 7 / 9 / 8 / 10; }
+#div300 { grid-area: 7 / 10 / 8 / 11; }
+#div301 { grid-area: 7 / 11 / 8 / 12; }
+#div302 { grid-area: 7 / 12 / 8 / 13; }
+#div303 { grid-area: 7 / 13 / 8 / 14; }
+#div304 { grid-area: 7 / 14 / 8 / 15; }
+#div305 { grid-area: 7 / 15 / 8 / 16; }
+#div306 { grid-area: 8 / 1 / 9 / 2; }
+#div307 { grid-area: 8 / 2 / 9 / 3; }
+#div308 { grid-area: 8 / 3 / 9 / 4; }
+#div309 { grid-area: 8 / 4 / 9 / 5; }
+#div310 { grid-area: 8 / 5 / 9 / 6; }
+#div311 { grid-area: 8 / 6 / 9 / 7; }
+#div312 { grid-area: 8 / 7 / 9 / 8; }
+#div313 { grid-area: 8 / 8 / 9 / 9; }
+#div314 { grid-area: 8 / 9 / 9 / 10; }
+#div315 { grid-area: 8 / 10 / 9 / 11; }
+#div316 { grid-area: 8 / 11 / 9 / 12; }
+#div317 { grid-area: 8 / 12 / 9 / 13; }
+#div318 { grid-area: 8 / 13 / 9 / 14; }
+#div319 { grid-area: 8 / 14 / 9 / 15; }
+#div320 { grid-area: 8 / 15 / 9 / 16; }
+#div321 { grid-area: 9 / 1 / 10 / 2; }
+#div322 { grid-area: 9 / 2 / 10 / 3; }
+#div323 { grid-area: 9 / 3 / 10 / 4; }
+#div324 { grid-area: 9 / 4 / 10 / 5; }
+#div325 { grid-area: 9 / 5 / 10 / 6; }
+#div326 { grid-area: 9 / 6 / 10 / 7; }
+#div327 { grid-area: 9 / 7 / 10 / 8; }
+#div328 { grid-area: 9 / 8 / 10 / 9; }
+#div329 { grid-area: 9 / 9 / 10 / 10; }
+#div330 { grid-area: 9 / 10 / 10 / 11; }
+#div331 { grid-area: 9 / 11 / 10 / 12; }
+#div332 { grid-area: 9 / 12 / 10 / 13; }
+#div333 { grid-area: 9 / 13 / 10 / 14; }
+#div334 { grid-area: 9 / 14 / 10 / 15; }
+#div335 { grid-area: 9 / 15 / 10 / 16; }
+#div336 { grid-area: 10 / 1 / 11 / 2; }
+#div337 { grid-area: 10 / 2 / 11 / 3; }
+#div338 { grid-area: 10 / 3 / 11 / 4; }
+#div339 { grid-area: 10 / 4 / 11 / 5; }
+#div340 { grid-area: 10 / 5 / 11 / 6; }
+#div341 { grid-area: 10 / 6 / 11 / 7; }
+#div342 { grid-area: 10 / 7 / 11 / 8; }
+#div343 { grid-area: 10 / 8 / 11 / 9; }
+#div344 { grid-area: 10 / 9 / 11 / 10; }
+#div345 { grid-area: 10 / 10 / 11 / 11; }
+#div346 { grid-area: 10 / 11 / 11 / 12; }
+#div347 { grid-area: 10 / 12 / 11 / 13; }
+#div348 { grid-area: 10 / 13 / 11 / 14; }
+#div349 { grid-area: 10 / 14 / 11 / 15; }
+#div350 { grid-area: 10 / 15 / 11 / 16; }
+#div351 { grid-area: 11 / 1 / 12 / 2; }
+#div352 { grid-area: 11 / 2 / 12 / 3; }
+#div353 { grid-area: 11 / 3 / 12 / 4; }
+#div354 { grid-area: 11 / 4 / 12 / 5; }
+#div355 { grid-area: 11 / 5 / 12 / 6; }
+#div356 { grid-area: 11 / 6 / 12 / 7; }
+#div357 { grid-area: 11 / 7 / 12 / 8; }
+#div358 { grid-area: 11 / 8 / 12 / 9; }
+#div359 { grid-area: 11 / 9 / 12 / 10; }
+#div360 { grid-area: 11 / 10 / 12 / 11; }
+#div361 { grid-area: 11 / 11 / 12 / 12; }
+#div362 { grid-area: 11 / 12 / 12 / 13; }
+#div363 { grid-area: 11 / 13 / 12 / 14; }
+#div364 { grid-area: 11 / 14 / 12 / 15; }
+#div365 { grid-area: 11 / 15 / 12 / 16; }
 
 /* grid 2 end */
 
@@ -328,8 +344,8 @@ ul > li {
   color: #ffffff;
   text-align: center;
   height: 25vh;
-  width: 20vw;
-  background: rgb(0, 87, 0);
+  width: 15vw;
+  background: rgb(0, 66, 57);
   display: grid;
   grid-template-columns: repeat(4, 0.25fr);
   grid-template-rows: repeat(8, 0.25fr);
@@ -337,38 +353,39 @@ ul > li {
   grid-row-gap: 1px;
   }
   
-  #div401 { grid-area: 1 / 1 / 2 / 3; }
-  #div402 { grid-area: 1 / 3 / 2 / 5; }
-  #div403 { grid-area: 2 / 1 / 3 / 2; }
-  #div404 { grid-area: 2 / 2 / 3 / 3; }
-  #div405 { grid-area: 2 / 3 / 3 / 4; }
-  #div406 { grid-area: 2 / 4 / 3 / 5; }
-  #div407 { grid-area: 3 / 1 / 4 / 2; }
-  #div408 { grid-area: 3 / 2 / 4 / 3; }
-  #div409 { grid-area: 3 / 3 / 4 / 4; }
-  #div410 { grid-area: 3 / 4 / 4 / 5; }
-  #div411 { grid-area: 4 / 1 / 5 / 2; }
-  #div412 { grid-area: 4 / 2 / 5 / 3; }
-  #div413 { grid-area: 4 / 3 / 5 / 4; }
-  #div414 { grid-area: 4 / 4 / 5 / 5; }
-  #div415 { grid-area: 5 / 1 / 6 / 2; }
-  #div416 { grid-area: 5 / 2 / 6 / 3; }
-  #div417 { grid-area: 5 / 3 / 6 / 4; }
-  #div418 { grid-area: 5 / 4 / 6 / 5; }
-  #div419 { grid-area: 6 / 1 / 7 / 2; }
-  #div420 { grid-area: 6 / 2 / 7 / 3; }
-  #div421 { grid-area: 6 / 3 / 7 / 4; }
-  #div422 { grid-area: 6 / 4 / 7 / 5; }
-  #div423 { grid-area: 7 / 1 / 8 / 2; }
-  #div424 { grid-area: 7 / 2 / 8 / 3; }
-  #div425 { grid-area: 7 / 3 / 8 / 4; }
-  #div426 { grid-area: 7 / 4 / 8 / 5; }
-  #div427 { grid-area: 8 / 1 / 9 / 2; }
-  #div428 { grid-area: 8 / 2 / 9 / 3; }
-  #div429 { grid-area: 8 / 3 / 9 / 4; }
-  #div430 { grid-area: 8 / 4 / 9 / 5; } 
+  #div501 { grid-area: 1 / 1 / 2 / 3; }
+  #div502 { grid-area: 1 / 3 / 2 / 5; }
+  #div503 { grid-area: 2 / 1 / 3 / 2; }
+  #div504 { grid-area: 2 / 2 / 3 / 3; }
+  #div505 { grid-area: 2 / 3 / 3 / 4; }
+  #div506 { grid-area: 2 / 4 / 3 / 5; }
+  #div507 { grid-area: 3 / 1 / 4 / 2; }
+  #div508 { grid-area: 3 / 2 / 4 / 3; }
+  #div509 { grid-area: 3 / 3 / 4 / 4; }
+  #div510 { grid-area: 3 / 4 / 4 / 5; }
+  #div511 { grid-area: 4 / 1 / 5 / 2; }
+  #div512 { grid-area: 4 / 2 / 5 / 3; }
+  #div513 { grid-area: 4 / 3 / 5 / 4; }
+  #div514 { grid-area: 4 / 4 / 5 / 5; }
+  #div515 { grid-area: 5 / 1 / 6 / 2; }
+  #div516 { grid-area: 5 / 2 / 6 / 3; }
+  #div517 { grid-area: 5 / 3 / 6 / 4; }
+  #div518 { grid-area: 5 / 4 / 6 / 5; }
+  #div519 { grid-area: 6 / 1 / 7 / 2; }
+  #div520 { grid-area: 6 / 2 / 7 / 3; }
+  #div521 { grid-area: 6 / 3 / 7 / 4; }
+  #div522 { grid-area: 6 / 4 / 7 / 5; }
+  #div523 { grid-area: 7 / 1 / 8 / 2; }
+  #div524 { grid-area: 7 / 2 / 8 / 3; }
+  #div525 { grid-area: 7 / 3 / 8 / 4; }
+  #div526 { grid-area: 7 / 4 / 8 / 5; }
+  #div527 { grid-area: 8 / 1 / 9 / 2; }
+  #div528 { grid-area: 8 / 2 / 9 / 3; }
+  #div529 { grid-area: 8 / 3 / 9 / 4; }
+  #div530 { grid-area: 8 / 4 / 9 / 5; } 
 
 /* Attendance grid end */
+
 .nav{
   width: 50%;
 }
@@ -404,7 +421,6 @@ ul > li {
 }
 
 footer {
-  position: fixed;
   bottom: 0;
   width: 100%;
   height: 100px;
