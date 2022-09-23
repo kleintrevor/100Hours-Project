@@ -13,6 +13,10 @@ const PulseCheckSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  departmentId: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model('PulseCheck', PulseCheckSchema);
