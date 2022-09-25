@@ -609,6 +609,10 @@ input[type=checkbox]{
   flex: none;
 }
 
+.checkboxes-col{
+  width: 200px;
+  display: inline-block;
+}
 body {
   background: DCDFE5; /* fallback for old browsers */
   background: rgb(204, 204, 204);
