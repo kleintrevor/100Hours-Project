@@ -4,11 +4,12 @@ module.exports = {
   getPulseChecks: async (req, res) => {
     console.log(req.user);
     try {
-      const pulseCheck = await PulseCheck.find({ userId: req.user.id });
+      const pulseCheck = await PulseCheck.find({ userId: req.user.id, departmentId: req.user.department});
       console.log(pulseCheck);
       res.render('pulseCheck.ejs', {
         pulseCheck: pulseCheck,
         user: req.user,
+        departmentId: req.user.department,
         title : 'Department Pulse Check Entry',
       });
     } catch (err) {
@@ -21,8 +22,15 @@ module.exports = {
         currentpulseCheck: req.body.pulseCheckItem,
         userId: req.user.id,
         date: req.body.date,
+        complex: req.body.complex,
+        pulsechecks: req.pulsechecks.currentpulseCheck,
+        supplyRoomDelivery: req.body.supplyRoomDelivery,
+        warehouseDelivery: req.body.warehouseDelivery,
+        icer: req.body.icer,
+        flightChecker: req.body.flightChecker,
+
       });
-      console.log('Weight has been tracked!');
+      console.log('Pulse check has been entered!');
       res.redirect('/pulseCheck');
     } catch (err) {
       console.log(err);
@@ -60,7 +68,7 @@ module.exports = {
     console.log(req.body.pulseCheckIdFromJSFile);
     try {
       await PulseCheck.findOneAndDelete({ _id: req.body.pulseCheckIdFromJSFile });
-      console.log('Deleted weight');
+      console.log('Deleted entry');
       res.json('Deleted It');
     } catch (err) {
       console.log(err);
