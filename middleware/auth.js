@@ -7,5 +7,5 @@ module.exports = {
       }
     }
   }
-  // between the req and response to check if the user is authoized (from controllers auth.js)
+  // between the req and response to check if the user is authorized (from controllers auth.js)
   // 
