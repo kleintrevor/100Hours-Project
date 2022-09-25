@@ -3,63 +3,69 @@
 
 <body>
     <% if (user) { %>
-        <h3>Hello <%= user.userName %>, please enter the pulse check data for the <%= user.department %> department:</h3>
+        <h3>Hello <%= user.userName.charAt(0).toUpperCase() + user.userName.slice(1) %>, please enter the pulse check data for the <%= user.department %> department:</h3>
       <% } %>
   <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
         <label>Please enter select todays date below:</label>
             <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
         <label>Enter your current staffing levels:</label>
             <input class="staffing" type="text" placeholder="Staffing" name='pulseCheckItem'>
-        
+            <div class="departmentInput">
+                <h3>Trial Data Input area for each department</h3>
+                <!-- <form class="checkpoints" action="/pulseCheck/createPulseCheck" method="POST"> -->
+                  <div >
+                    <label>What Complex are you on?</label>
+                    <select name="complex" id="complex"  >
+                        <option value="6:00 AM">6:00 AM</option>
+                        <option value="8:00 AM">8:00 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                        <option value="7:00 PM">7:00 PM</option>
+                        <option value="10:00 PM">10:00 PM</option>
+                      </select> 
+                      <div >
+                        <label>Trucks in Service at the moment:</label>
+                        <input type="text" class="form-control" placeholder="# Trucks in service" name="Trucksinservice">
+                      </div>
+                      <div class="checkboxes-col">
+                        <label><input type="checkbox" name="checkpoints" value="true" id="supplyRoomDelivery">Supply Room Delivery</label>
+                        <label for="warehouseDelivery"><input type="checkbox" name="checkpoints" value="501 warehouse delivery" id="warehouseDelivery">501 Warehouse Delivery</label>
+                        <label for="icer"><input type="checkbox" name="checkpoints" value="icer" id="icer">Icer</label>
+                        <label for="flightChecker"><input type="checkbox" name="checkpoints" value="flight checker" id="flightChecker">Flight Checker</label>
+                        <label for="c5"><input type="checkbox" name="checkpoints" value="qcp" id="c5">QCP</label>
+                      </div>
+                      <div class="checkboxes-col">
+                        <label for="c6"><input type="checkbox" name="checkpoints" value="M&P ids" id="c6">M&P IDS</label>
+                        <label for="c7"><input type="checkbox" name="checkpoints" value="supplky truck" id="c7">Supply Truck</label>
+                        <label for="c8"><input type="checkbox" name="checkpoints" value="ramp exchange truck" id="c8">Ramp Exchange Truck</label>
+                        <label for="c9"><input type="checkbox" name="checkpoints" value="temp check ice trailer" id="c9">Temp Check Ice Trailer</label>
+                        <label for="c10"><input type="checkbox" name="checkpoints" value="temp check coolers" id="c10">Temp Check Coolers</label>
+                      </div>
+                  </div>
         <input type="submit">
     </form>
+
+<% pulsechecks %>
 
     <div class="mt-lg">
         <h5>Your current tracked staffing</h5>
         <ul class="tracked-weights">
             <% pulseCheck.forEach( el => { %> 
                     <li class='cell' data-id='<%=el._id%>'>
-                        <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentpulseCheck %></span>
+                        <!-- <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.currentpulseCheck %></span>
                         <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.date %></span>
-                        <span class='del'> Delete </span>
+                        <span class='del'> Delete </span> -->
                     </li>
             <% }) %>    
         </ul>
     </div>
   
-    <div class="departmentInput">
-        <h3>Trial Data Input area for each department</h3>
-        <form action="/" method="POST">
-          <div class="form-group mb-3">
-            <label>What Complex are you on?</label>
-            <select name="complex" id="complex"  >
-                <option value="6:00 AM">6:00 AM</option>
-                <option value="8:00 AM">8:00 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="1:00 PM">1:00 PM</option>
-                <option value="4:00 PM">4:00 PM</option>
-                <option value="7:00 PM">7:00 PM</option>
-                <option value="10:00 PM">10:00 PM</option>
-              </select> 
-              <div class="form-group mb-3">
-                <label>Trucks in Service at the moment:</label>
-                <input type="text" class="form-control" placeholder="# Trucks in service" name="Trucksinservice">
-              </div>
-              <label for="c1"><input type="checkbox" name="checkpoints" value="red" id="c1">Supply Room Delivery</label>
-              <label for="c2"><input type="checkbox" name="checkpoints" value="green" id="c2">501 Warehouse Delivery</label>
-              <label for="c3"><input type="checkbox" name="checkpoints" value="blue" id="c3">Icer</label>
-              <label for="c4"><input type="checkbox" name="checkpoints" value="red" id="c4">Flight Checker</label>
-              <label for="c5"><input type="checkbox" name="checkpoints" value="green" id="c5">QCP</label>
-              <label for="c6"><input type="checkbox" name="checkpoints" value="blue" id="c6">M&P IDS</label>
-              <label for="c7"><input type="checkbox" name="checkpoints" value="green" id="c7">Supply Truck</label>
-              <label for="c8"><input type="checkbox" name="checkpoints" value="blue" id="c8">Ramp Exchange Truck</label>
-              <label for="c9"><input type="checkbox" name="checkpoints" value="red" id="c9">Temp Check Ice Trailer</label>
-              <label for="c10"><input type="checkbox" name="checkpoints" value="green" id="c10">Temp Check Coolers</label>
-          </div>
+<!-- 
           <div class="d-grid mt-3">
           <button type="submit" class="btn btn-danger">Submit</button>
           </div>
-        </form>
+        </form> -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
