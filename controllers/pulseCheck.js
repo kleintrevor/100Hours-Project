@@ -9,8 +9,9 @@ module.exports = {
       res.render('pulseCheck.ejs', {
         pulseCheck: pulseCheck,
         user: req.user,
-        departmentId: req.user.department,
+        departmentId: req.body.department,
         title : 'Department Pulse Check Entry',
+        pulsechecks: req.body.currentpulseCheck,
       });
     } catch (err) {
       console.log(err);
@@ -23,7 +24,7 @@ module.exports = {
         userId: req.user.id,
         date: req.body.date,
         complex: req.body.complex,
-        pulsechecks: req.pulsechecks.currentpulseCheck,
+
         supplyRoomDelivery: req.body.supplyRoomDelivery,
         warehouseDelivery: req.body.warehouseDelivery,
         icer: req.body.icer,
