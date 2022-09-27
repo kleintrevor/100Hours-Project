@@ -32,7 +32,7 @@ exports.postLogin = (req, res, next) => {
     }
     if (!user) {
       req.flash('errors', info);
-      return res.redirect('/login');
+      return res.redirect('/');
     }
     req.logIn(user, (err) => {
       if (err) {
@@ -78,7 +78,7 @@ exports.postSignup = (req, res, next) => {
 
   if (validationErrors.length) {
     req.flash('errors', validationErrors);
-    return res.redirect('../signup');
+    return res.redirect('/');
   }
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
@@ -103,7 +103,7 @@ exports.postSignup = (req, res, next) => {
         req.flash('errors', {
           msg: 'Account with that email address or username already exists.',
         });
-        return res.redirect('../signup');
+        return res.redirect('/');
       }
       user.save((err) => {
         if (err) {
