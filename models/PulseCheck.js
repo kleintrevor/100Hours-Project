@@ -25,7 +25,7 @@ const PulseCheckSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  trucksinservice: {
+  trucksInService: {
     type: Number,
     required: true,
   },

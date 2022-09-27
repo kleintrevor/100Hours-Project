@@ -23,7 +23,7 @@ module.exports = {
         date: req.body.date,
         complexTime: req.body.complexTime,
         complexNumber: req.body.complexNumber,
-        trucksinservice: req.body.trucksinservice,
+        trucksInService: req.body.trucksInService,
         supplyRoomDelivery: req.body.supplyRoomDelivery,
         warehouseDelivery: req.body.warehouseDelivery,
         icer: req.body.icer,
