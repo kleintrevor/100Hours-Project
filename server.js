@@ -1,4 +1,5 @@
 const express = require('express');
+const fileUpload = require('express-fileupload');
 const app = express();
 const mongoose = require('mongoose');
 const passport = require('passport');
@@ -42,6 +43,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(flash());
+app.use(fileUpload());
 
 app.use('/', mainRoutes);
 app.use('/pulseCheck', pulseCheckRoutes);
