@@ -25,6 +25,9 @@ const PulseCheckSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  // Below are the checkboxes.  I still need to get these to return properly. 
+  // It looks like i'll need some basic code to validate that the check box is checked or unchecked
+
   // warehouseDelivery: {
   //   type: Boolean,
   //   required: true,
