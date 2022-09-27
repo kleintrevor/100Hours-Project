@@ -4,7 +4,7 @@ module.exports = {
   getPulseChecks: async (req, res) => {
     console.log(req.user);
     try {
-      const pulseCheck = await PulseCheck.find({ userId: req.user.id, departmentId: req.user.department});
+      const pulseCheck = await PulseCheck.find({ userId: req.user.id});
       console.log(pulseCheck);
       res.render('pulseCheck.ejs', {
         pulseCheck: pulseCheck,
