@@ -28,7 +28,6 @@ module.exports = {
         icer: req.body.icer,
         flightChecker: req.body.flightChecker,
         departmentId: req.user.department,
-        pulsechecks: req.body.currentpulseCheck,  // variable i'm currently having issues trying to call
       });
       console.log('Pulse check has been entered!');
       res.redirect('/pulseCheck');
