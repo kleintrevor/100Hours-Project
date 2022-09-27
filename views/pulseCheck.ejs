@@ -5,6 +5,7 @@
     <% if (user) { %>
         <h3>Hello <%= user.userName.charAt(0).toUpperCase() + user.userName.slice(1) %>, please enter the pulse check data for the <%= user.department %> department:</h3>
       <% } %>
+
   <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
         <label>Please enter select todays date below:</label>
             <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
@@ -12,7 +13,6 @@
             <input class="staffing" type="text" placeholder="Staffing" name='pulseCheckItem'>
             <div class="departmentInput">
                 <h3>Trial Data Input area for each department</h3>
-                <!-- <form class="checkpoints" action="/pulseCheck/createPulseCheck" method="POST"> -->
                   <div >
                     <label>What Complex are you on?</label>
                     <select name="complex" id="complex"  >
@@ -24,17 +24,20 @@
                         <option value="7:00 PM">7:00 PM</option>
                         <option value="10:00 PM">10:00 PM</option>
                       </select> 
+
                       <div >
                         <label>Trucks in Service at the moment:</label>
                         <input type="text" class="form-control" placeholder="# Trucks in service" name="Trucksinservice">
                       </div>
+
                       <div class="checkboxes-col">
                         <label><input type="checkbox" name="checkpoints" value="true" id="supplyRoomDelivery">Supply Room Delivery</label>
                         <label for="warehouseDelivery"><input type="checkbox" name="checkpoints" value="501 warehouse delivery" id="warehouseDelivery">501 Warehouse Delivery</label>
                         <label for="icer"><input type="checkbox" name="checkpoints" value="icer" id="icer">Icer</label>
                         <label for="flightChecker"><input type="checkbox" name="checkpoints" value="flight checker" id="flightChecker">Flight Checker</label>
-                        <label for="c5"><input type="checkbox" name="checkpoints" value="qcp" id="c5">QCP</label>
+                        <label for="QCP"><input type="checkbox" name="checkpoints" value="qcp" id="qcp">QCP</label>
                       </div>
+
                       <div class="checkboxes-col">
                         <label for="c6"><input type="checkbox" name="checkpoints" value="M&P ids" id="c6">M&P IDS</label>
                         <label for="c7"><input type="checkbox" name="checkpoints" value="supplky truck" id="c7">Supply Truck</label>
@@ -43,10 +46,11 @@
                         <label for="c10"><input type="checkbox" name="checkpoints" value="temp check coolers" id="c10">Temp Check Coolers</label>
                       </div>
                   </div>
+
         <input type="submit">
     </form>
 
-<h4>test area: <% res.body.complex %></h4>
+<h4>test area: <% req.body.complex %></h4> <!-- test variable output so i can check it without leaving the page-->
 
     <div class="mt-lg">
         <h5>Your current tracked staffing</h5>
