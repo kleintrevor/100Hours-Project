@@ -6,7 +6,7 @@ module.exports = {
     try {
       const pulseCheck = await PulseCheck.find({ userId: req.user.id});
       console.log(pulseCheck);
-      res.render('./pages/pulseCheck.ejs', {
+      res.render('./pulseCheck.ejs', {
         pulseCheck: pulseCheck,
         user: req.user,
         title : 'Department Pulse Check Entry',
@@ -21,7 +21,8 @@ module.exports = {
         currentpulseCheck: req.body.pulseCheckItem,
         userId: req.user.id,
         date: req.body.date,
-        complex: req.body.complex,
+        complexTime: req.body.complexTime,
+        complexNumber: req.body.complexNumber,
         trucksinservice: req.body.trucksinservice,
         supplyRoomDelivery: req.body.supplyRoomDelivery,
         warehouseDelivery: req.body.warehouseDelivery,
