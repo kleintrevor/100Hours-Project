@@ -9,9 +9,7 @@ module.exports = {
       res.render('pulseCheck.ejs', {
         pulseCheck: pulseCheck,
         user: req.user,
-        departmentId: req.body.department,
         title : 'Department Pulse Check Entry',
-        pulsechecks: req.body.currentpulseCheck,
       });
     } catch (err) {
       console.log(err);
@@ -24,12 +22,13 @@ module.exports = {
         userId: req.user.id,
         date: req.body.date,
         complex: req.body.complex,
-
+        trucksinservice: req.body.trucksinservice,
         supplyRoomDelivery: req.body.supplyRoomDelivery,
         warehouseDelivery: req.body.warehouseDelivery,
         icer: req.body.icer,
         flightChecker: req.body.flightChecker,
-
+        departmentId: req.user.department,
+        pulsechecks: req.body.currentpulseCheck,  // variable i'm currently having issues trying to call
       });
       console.log('Pulse check has been entered!');
       res.redirect('/pulseCheck');
