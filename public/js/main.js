@@ -15,13 +15,13 @@ Array.from(cells).forEach((el) => {
 // });
 
 async function deletePulseCheck() {
-  const weightId = this.dataset.id;
+  const pulseCheck = this.dataset.id;
   try {
     const response = await fetch('pulseCheck/deletePulseCheck', {
       method: 'delete',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify({
-        weightIdFromJSFile: weightId,
+        pulseCheckFromJSFile: pulseCheck,
       }),
     });
     const data = await response.json();
@@ -33,13 +33,13 @@ async function deletePulseCheck() {
 }
 
 async function markComplete() {
-  const weightId = this.parentNode.dataset.id;
+  const pulseCheck = this.parentNode.dataset.id;
   try {
     const response = await fetch('pulseCheck/markComplete', {
       method: 'put',
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify({
-        weightIdFromJSFile: weightId,
+        pulseCheckFromJSFile: pulseCheck,
       }),
     });
     const data = await response.json();
@@ -51,7 +51,7 @@ async function markComplete() {
 }
 
 async function markIncomplete() {
-  const weightId = this.parentNode.dataset.id;
+  const pulseCheck = this.parentNode.dataset.id;
   try {
     const response = await fetch('pulseCheck/markIncomplete', {
       method: 'put',
