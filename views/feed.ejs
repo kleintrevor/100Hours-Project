@@ -4,7 +4,15 @@
 
 <body>
     <h4>Attendance</h4>
-    <%= complexTime %>
+<ul >
+    <% feedItems.forEach( el => { %> 
+            <li class='cell' data-id='<%=el._id%>'>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.complexTime %></span>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.trucksInService %></span>
+                <!-- <span class='del'> Delete </span> -->
+            </li>
+    <% }) %>    
+</ul>
 
     <section id="attendance">
         <div id="div501" class="amShift">AM Staffing</div> <!-- AM Staffing Header -->
@@ -14,7 +22,9 @@
         <div id="div505" class="target">Target</div>      <!-- Target -->
         <div id="div506" class="actual">Actual</div>      <!-- Actual -->
         <div id="div507" class="col_green">20 / 20</div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div508" class="col_white"> </div>
+        <div id="div508" class="col_white">    
+            <% feedItems.forEach( el => { %> <span><%= el.currentpulseCheck %></span> / 20<% }) %>  
+        </div>
         <div id="div509" class="col_green">30 / 30</div>
         <div id="div510" class="col_white"> </div>
         <div id="div511" class="col_green">25 / 25</div>  <!-- first column -->   <!-- GREEN column -->
