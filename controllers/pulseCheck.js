@@ -18,17 +18,19 @@ module.exports = {
   createPulseCheck: async (req, res) => {
     try {
       await PulseCheck.create({
-        currentStaffingLevels: req.body.pulseCheckItem,
         userId: req.user.id,
+        departmentId: req.user.department,
         date: req.body.date,
+        targetStaffingLevels: req.body.targetStaffingLevels,
+        currentStaffingLevels: req.body.pulseCheckItem,
         complexTime: req.body.complexTime,
         complexNumber: req.body.complexNumber,
+        trucksTarget: req.body.trucksTarget,
         trucksInService: req.body.trucksInService,
         supplyRoomDelivery: req.body.supplyRoomDelivery,
         warehouseDelivery: req.body.warehouseDelivery,
         icer: req.body.icer,
         flightChecker: req.body.flightChecker,
-        departmentId: req.user.department,
       });
       console.log('Pulse check has been entered!');
       res.redirect('/pulseCheck');

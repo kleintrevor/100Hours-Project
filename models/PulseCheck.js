@@ -13,6 +13,10 @@ const PulseCheckSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  targetStaffingLevels: {
+    type: Number,
+    required: true,
+  },
   currentStaffingLevels: {
     type: Number,
     required: true,
@@ -25,10 +29,13 @@ const PulseCheckSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-
+  trucksTarget: {
+    type: Number,
+    required: false,
+  },
   trucksInService: {
     type: Number,
-    required: true,
+    required: false,
   },
 
   // Below are the checkboxes.  I still need to get these to return properly. 

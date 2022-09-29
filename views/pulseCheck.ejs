@@ -11,10 +11,12 @@
   <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
         <label>Please enter select todays date below:</label>
             <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
+        <label>Enter your target staffing levels:</label>
+            <input class="staffing" type="text" placeholder="Staffing #" name='targetStaffingLevels'>
         <label>Enter your current staffing levels:</label>
-            <input class="staffing" type="text" placeholder="Staffing" name='pulseCheckItem'>
+            <input class="staffing" type="text" placeholder="Staffing #" name='pulseCheckItem'>
+            
             <div class="departmentInput">
-
                   <div >
                     <label>What time are you entering for?</label>
                     <select name="complexTime" id="complexTime" >
@@ -48,6 +50,8 @@
                         </select> 
                         <h3>Trial Data Input area for each department</h3>
                       <div >
+                        <label>Trucks for the day:</label>
+                        <input type="text" class="form-control" placeholder="# Trucks" name="trucksTarget">
                         <label>Trucks in Service at the moment:</label>
                         <input type="text" class="form-control" placeholder="# Trucks in service" name="trucksInService">
                       </div>
