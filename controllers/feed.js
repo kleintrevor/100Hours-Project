@@ -6,13 +6,23 @@ module.exports = {
     console.log(req.user);
     try {
       const feedItems = await PulseCheck.find({ userId: req.user.id});
-      console.log(feedItems);
+      console.log(`these are the feed items ${feedItems}`);
       res.render('feed.ejs', {
-        modFeed: feedItems, 
+        feedItems: feedItems, 
         moment: moment,
         title : 'Department Pulse Check Entry',
+        currentpulseCheck: req.body.pulseCheckItem,
+        userId: req.user.id,
+        date: req.body.date,
+        complexTime: req.body.complexTime,
+        complexNumber: req.body.complexNumber,
         trucksInService: req.body.trucksInService,
-        complexTime: req.body.complexTime, })
+        supplyRoomDelivery: req.body.supplyRoomDelivery,
+        warehouseDelivery: req.body.warehouseDelivery,
+        icer: req.body.icer,
+        flightChecker: req.body.flightChecker,
+        departmentId: req.user.department,
+       })
     } catch (err) {
       console.log(err);
     }
