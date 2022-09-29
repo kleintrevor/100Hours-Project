@@ -11,7 +11,7 @@ module.exports = {
         feedItems: feedItems, 
         moment: moment,
         title : 'Department Pulse Check Entry',
-        currentpulseCheck: req.body.pulseCheckItem,
+        currentStaffingLevels: req.body.pulseCheckItem,
         userId: req.user.id,
         date: req.body.date,
         complexTime: req.body.complexTime,

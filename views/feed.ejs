@@ -7,8 +7,12 @@
 <ul >
     <% feedItems.forEach( el => { %> 
             <li class='cell' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.complexTime %></span>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.trucksInService %></span>
+                <%= el.trucksInService %>
+                <%= el.complexTime %>
+                <%= el.complexNumber %>
+                <%= el.date %>
+                <%= el.departmentId %>
+                <%= el.currentStaffingLevels %>
                 <!-- <span class='del'> Delete </span> -->
             </li>
     <% }) %>    
@@ -23,7 +27,7 @@
         <div id="div506" class="actual">Actual</div>      <!-- Actual -->
         <div id="div507" class="col_green">20 / 20</div>  <!-- first column -->   <!-- GREEN column -->
         <div id="div508" class="col_white">    
-            <% feedItems.forEach( el => { %> <span><%= el.currentpulseCheck %></span> / 20<% }) %>  
+            <% feedItems.forEach( el => { %> <span><%= el.currentStaffingLevels %></span> / 20<% }) %>  
         </div>
         <div id="div509" class="col_green">30 / 30</div>
         <div id="div510" class="col_white"> </div>

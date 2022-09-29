@@ -18,7 +18,7 @@ module.exports = {
   createPulseCheck: async (req, res) => {
     try {
       await PulseCheck.create({
-        currentpulseCheck: req.body.pulseCheckItem,
+        currentStaffingLevels: req.body.pulseCheckItem,
         userId: req.user.id,
         date: req.body.date,
         complexTime: req.body.complexTime,

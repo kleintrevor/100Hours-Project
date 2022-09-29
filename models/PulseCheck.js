@@ -1,16 +1,20 @@
 const mongoose = require('mongoose');
 
 const PulseCheckSchema = new mongoose.Schema({
-  currentpulseCheck: {
-    type: Number,
-    required: true,
-  },
   date: {
     type: String,
     required: true,
   },
   userId: {
     type: String,
+    required: true,
+  },  
+  departmentId: {
+    type: String,
+    required: true,
+  },
+  currentStaffingLevels: {
+    type: Number,
     required: true,
   },
   complexTime:{
@@ -21,10 +25,7 @@ const PulseCheckSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  departmentId: {
-    type: String,
-    required: true,
-  },
+
   trucksInService: {
     type: Number,
     required: true,
