@@ -4,7 +4,7 @@
 
 <body>
     <h4>Attendance</h4>
-<ul >
+<!-- <ul >
     <% feedItems.forEach( el => { %> 
             <li class='cell' data-id='<%=el._id%>'>
                 <%= el.trucksInService %>
@@ -13,10 +13,10 @@
                 <%= el.date %>
                 <%= el.departmentId %>
                 <%= el.currentStaffingLevels %>
-                <!-- <span class='del'> Delete </span> -->
+                <span class='del'> Delete </span>
             </li>
     <% }) %>    
-</ul>
+</ul> -->
 
     <section id="attendance">
         <div id="div501" class="amShift">AM Staffing</div> <!-- AM Staffing Header -->
@@ -25,32 +25,30 @@
         <div id="div504" class="actual">Actual</div>      <!-- Actual -->
         <div id="div505" class="target">Target</div>      <!-- Target -->
         <div id="div506" class="actual">Actual</div>      <!-- Actual -->
-        <div id="div507" class="col_green">20 / 20</div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div508" class="col_white">    
-            <% feedItems.forEach( el => { %> <span><%= el.currentStaffingLevels %></span> / 20<% }) %>  
-        </div>
-        <div id="div509" class="col_green">30 / 30</div>
-        <div id="div510" class="col_white"> </div>
-        <div id="div511" class="col_green">25 / 25</div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div512" class="col_white"> </div>
-        <div id="div513" class="col_green">32 / 32</div>
-        <div id="div514" class="col_white"> </div>
-        <div id="div515" class="col_green">34 / 34 </div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div516" class="col_white"> </div>
-        <div id="div517" class="col_green">14 / 14</div>
-        <div id="div518" class="col_white"> </div>
-        <div id="div519" class="col_green">10 / 10</div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div520" class="col_white"> </div>
-        <div id="div521" class="col_green">22 / 22</div>
-        <div id="div522" class="col_white"> </div>
-        <div id="div523" class="col_green">24 / 24</div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div524" class="col_white"> </div>
-        <div id="div525" class="col_green">12 / 12</div>
-        <div id="div526" class="col_white"> </div>
-        <div id="div527" class="col_green">10 / 10</div>  <!-- first column -->
-        <div id="div528" class="col_white"> </div>
-        <div id="div529" class="col_green">14 / 14</div>
-        <div id="div530" class="col_white"> </div>
+        <div id="div507" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->   <!-- GREEN column -->
+        <div id="div508" class="col_white"> <%= feedItems[0].currentStaffingLevels %></div>
+        <div id="div509" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
+        <div id="div510" class="col_white"><%= feedItems[0].currentStaffingLevels %></div>
+        <div id="div511" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->   <!-- GREEN column -->
+        <div id="div512" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div513" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
+        <div id="div514" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div515" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->   <!-- GREEN column -->
+        <div id="div516" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div517" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
+        <div id="div518" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div519" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->   <!-- GREEN column -->
+        <div id="div520" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div521" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
+        <div id="div522" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div523" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->   <!-- GREEN column -->
+        <div id="div524" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div525" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
+        <div id="div526" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div527" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->
+        <div id="div528" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
+        <div id="div529" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
+        <div id="div530" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
     </section>
 
     <h4> Departmental Updates</h4>
@@ -81,94 +79,94 @@
         <div id="div23" class="actual">Actual</div>
         <div id="div24"> Dock </div>  <!-- first column -->
         <div id="div25" class="col_green">08:00</div>  <!-- GREEN column -->
-        <div id="div26" class="col_white"> </div>
+        <div id="div26" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div27" class="col_green">10:00 </div>
-        <div id="div28" class="col_white"> </div>
+        <div id="div28" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div29" class="col_green">11:00</div>
-        <div id="div30" class="col_white"> </div>
+        <div id="div30" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div31" class="col_green">13:00</div>
-        <div id="div32" class="col_white"> </div>
+        <div id="div32" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div33" class="col_green">16:00</div>
-        <div id="div34" class="col_white"> </div>
+        <div id="div34" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div35" class="col_green">19:00</div>
-        <div id="div36" class="col_white"> </div>
+        <div id="div36" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div37" class="col_green">22:00</div>
-        <div id="div38" class="col_white"> </div>
+        <div id="div38" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div39"> Make & Pack </div>   <!-- first column -->  
         <div id="div40" class="col_green">13:00</div>  <!-- GREEN column -->
-        <div id="div41" class="col_white"> </div>
+        <div id="div41" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div42" class="col_green">14:00</div>
-        <div id="div43" class="col_white"> </div>
+        <div id="div43" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div44" class="col_green">18:00</div>
-        <div id="div45" class="col_white"> </div>
+        <div id="div45" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div46" class="col_green">20:00</div>
-        <div id="div47" class="col_white"> </div>
+        <div id="div47" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div48" class="col_green">05:00</div>
-        <div id="div49" class="col_white"> </div>
+        <div id="div49" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div50" class="col_green">09:00</div>
-        <div id="div51" class="col_white"> </div>
+        <div id="div51" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div52" class="col_green">12:00</div>
-        <div id="div53" class="col_white"> </div>
+        <div id="div53" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div54"> Pick & Pack </div>   <!-- first column -->
         <div id="div55" class="col_green">13:00</div>  <!-- GREEN column -->
-        <div id="div56" class="col_white"> </div>
+        <div id="div56" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div57" class="col_green">14:00</div>
-        <div id="div58" class="col_white"> </div>
+        <div id="div58" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div59" class="col_green">18:00</div>
-        <div id="div60" class="col_white"> </div>
+        <div id="div60" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div61" class="col_green">20:00</div>
-        <div id="div62" class="col_white"> </div>
+        <div id="div62" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div63" class="col_green">05:00</div>
-        <div id="div64" class="col_white"> </div>
+        <div id="div64" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div65" class="col_green">09:00</div>
-        <div id="div66" class="col_white"> </div>
+        <div id="div66" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div67" class="col_green">13:00</div>
-        <div id="div68" class="col_white"> </div>
+        <div id="div68" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div69"> Wash & Pack </div>   <!-- first column -->
         <div id="div70" class="col_green">13:00</div>  <!-- GREEN column -->
-        <div id="div71" class="col_white"> </div>
+        <div id="div71" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div72" class="col_green">17:00</div>
-        <div id="div73" class="col_white"> </div>
+        <div id="div73" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div74" class="col_green">20:00</div>
-        <div id="div75" class="col_white"> </div>
+        <div id="div75" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div76" class="col_green">22:00</div>
-        <div id="div77" class="col_white"> </div>
+        <div id="div77" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div78" class="col_green">08:00</div>
-        <div id="div79" class="col_white"> </div>
+        <div id="div79" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div80" class="col_green">11:00</div>
-        <div id="div81" class="col_white"> </div>
+        <div id="div81" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div82" class="col_green">13:00</div>
-        <div id="div83" class="col_white"> </div>
+        <div id="div83" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div84"> Seal </div>  <!-- first column -->
         <div id="div85" class="col_green">10:00</div>  <!-- GREEN column -->
-        <div id="div86" class="col_white"> </div>
+        <div id="div86" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div87" class="col_green">12:00</div>
-        <div id="div88" class="col_white"> </div>
+        <div id="div88" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div89" class="col_green">15:00</div>
-        <div id="div90" class="col_white"> </div>
+        <div id="div90" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div91" class="col_green">17:00</div>
-        <div id="div92" class="col_white"> </div>
+        <div id="div92" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div93" class="col_green">20:00</div>
-        <div id="div94" class="col_white"> </div>
+        <div id="div94" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div95" class="col_green">20:00</div>
-        <div id="div96" class="col_white"> </div>
+        <div id="div96" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div97" class="col_green">10:00</div>
-        <div id="div98" class="col_white"> </div>
+        <div id="div98" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div99"> Transportation </div>  <!-- first column -->
         <div id="div100" class="col_green">09:00</div>  <!-- GREEN column -->
-        <div id="div101" class="col_white"> </div>
+        <div id="div101" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div102" class="col_green">11:00</div>
-        <div id="div103" class="col_white"> </div>
+        <div id="div103" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div104" class="col_green">14:00</div>
-        <div id="div105" class="col_white"> </div>
+        <div id="div105" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div106" class="col_green">15:00</div>
-        <div id="div107" class="col_white"> </div>
+        <div id="div107" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div108" class="col_green">15:00</div>
-        <div id="div109" class="col_white"> </div>
+        <div id="div109" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div110" class="col_green">18:00</div>
-        <div id="div111" class="col_white"> </div>
+        <div id="div111" class="col_white"> <%= feedItems[0].complexNumber %></div>
         <div id="div112" class="col_green">18:00</div>
-        <div id="div113" class="col_white"> </div>
+        <div id="div113" class="col_white"> <%= feedItems[0].complexNumber %></div>
     </section>
 
 <h4>Check Points</h4>

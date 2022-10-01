@@ -11,24 +11,22 @@ module.exports = {
         feedItems: feedItems, 
         moment: moment,
         title : 'Department Pulse Check Entry',
-        currentStaffingLevels: req.body.pulseCheckItem,
         userId: req.user.id,
+        departmentId: req.user.department,
         date: req.body.date,
+        targetStaffingLevels: req.body.targetStaffingLevels,
+        currentStaffingLevels: req.body.pulseCheckItem,
         complexTime: req.body.complexTime,
         complexNumber: req.body.complexNumber,
+        trucksTarget: req.body.trucksTarget,
         trucksInService: req.body.trucksInService,
         supplyRoomDelivery: req.body.supplyRoomDelivery,
         warehouseDelivery: req.body.warehouseDelivery,
         icer: req.body.icer,
         flightChecker: req.body.flightChecker,
-        departmentId: req.user.department,
        })
     } catch (err) {
       console.log(err);
     }
   }
 }
-
-    // const feedItems = await db.collection('pulsechecks').find().toArray();
-    // const incompleteCheckPoint = await db.collection('pulsechecks').countDocuments({completed: false})
-    // response.render('feed.ejs', {modFeed: feedItems, incomplete: incompleteCheckPoint  })
