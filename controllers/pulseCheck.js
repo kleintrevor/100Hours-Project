@@ -16,6 +16,7 @@ module.exports = {
     }
   },
   createPulseCheck: async (req, res) => {
+
     try {
       await PulseCheck.create({
         userId: req.user.id,
@@ -31,6 +32,7 @@ module.exports = {
         warehouseDelivery: req.body.warehouseDelivery,
         icer: req.body.icer,
         flightChecker: req.body.flightChecker,
+        qcp: req.body.qcp,
       });
       console.log('Pulse check has been entered!');
       res.redirect('/pulseCheck');

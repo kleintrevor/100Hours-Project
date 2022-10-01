@@ -7,76 +7,83 @@
           <%= user.department %> department:</h3>
       <% } %>
 
-
   <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
+    <label>Please enter select todays date below:</label>
+        <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
+    <label>Enter your target staffing levels:</label>
+        <input class="staffing" type="text" placeholder="Staffing #" name='targetStaffingLevels'>
+    <label>Enter your current staffing levels:</label>
+        <input class="staffing" type="text" placeholder="Staffing #" name='pulseCheckItem'>
+        
+    <div class="departmentInput">
+      <div >
+        <label>What time are you entering for?</label>
+        <select name="complexTime" id="complexTime" >
+            <option value="6:00 AM">6:00 AM</option>
+            <option value="8:00 AM">8:00 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="4:00 PM">4:00 PM</option>
+            <option value="7:00 PM">7:00 PM</option>
+            <option value="10:00 PM">10:00 PM</option>
+          </select> 
+        <label>What Complex are you on?</label>
+        <select name="complexNumber" id="complexNumber" >
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+          </select>
+      </div>
+    </div>
+    <input type="submit">
+  </form>
+  <h3>Trial Data Input area for each department</h3>
+  <form class="checkPoint" action="/pulseCheck/createPulseCheck" method='POST'>
+    <div>
+      <div >
         <label>Please enter select todays date below:</label>
-            <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
-        <label>Enter your target staffing levels:</label>
-            <input class="staffing" type="text" placeholder="Staffing #" name='targetStaffingLevels'>
-        <label>Enter your current staffing levels:</label>
-            <input class="staffing" type="text" placeholder="Staffing #" name='pulseCheckItem'>
-            
-            <div class="departmentInput">
-                  <div >
-                    <label>What time are you entering for?</label>
-                    <select name="complexTime" id="complexTime" >
-                        <option value="6:00 AM">6:00 AM</option>
-                        <option value="8:00 AM">8:00 AM</option>
-                        <option value="11:00 AM">11:00 AM</option>
-                        <option value="1:00 PM">1:00 PM</option>
-                        <option value="4:00 PM">4:00 PM</option>
-                        <option value="7:00 PM">7:00 PM</option>
-                        <option value="10:00 PM">10:00 PM</option>
-                      </select> 
-                      <label>What Complex are you on?</label>
-                      <select name="complexNumber" id="complexNumber" >
-                          <option value="06">06</option>
-                          <option value="07">07</option>
-                          <option value="08">08</option>
-                          <option value="09">09</option>
-                          <option value="10">10</option>
-                          <option value="11">11</option>
-                          <option value="12">12</option>
-                          <option value="13">13</option>
-                          <option value="14">14</option>
-                          <option value="15">15</option>
-                          <option value="16">16</option>
-                          <option value="17">17</option>
-                          <option value="18">18</option>
-                          <option value="19">19</option>
-                          <option value="20">20</option>
-                          <option value="21">21</option>
-                          <option value="22">22</option>
-                        </select> 
-                        <h3>Trial Data Input area for each department</h3>
-                      <div >
-                        <label>Trucks for the day:</label>
-                        <input type="text" class="form-control" placeholder="# Trucks" name="trucksTarget">
-                        <label>Trucks in Service at the moment:</label>
-                        <input type="text" class="form-control" placeholder="# Trucks in service" name="trucksInService">
-                      </div>
-
-                      <div class="checkboxes-col">
-                        <label><input type="checkbox" name="checkpoints" value="true" id="supplyRoomDelivery">Supply Room Delivery</label>
-                        <label for="warehouseDelivery"><input type="checkbox" name="checkpoints" value="501 warehouse delivery" id="warehouseDelivery">501 Warehouse Delivery</label>
-                        <label for="icer"><input type="checkbox" name="checkpoints" value="icer" id="icer">Icer</label>
-                        <label for="flightChecker"><input type="checkbox" name="checkpoints" value="flight checker" id="flightChecker">Flight Checker</label>
-                        <label for="QCP"><input type="checkbox" name="checkpoints" value="qcp" id="qcp">QCP</label>
-                      </div>
-
-                      <div class="checkboxes-col">
-                        <label for="c6"><input type="checkbox" name="checkpoints" value="M&P ids" id="c6">M&P IDS</label>
-                        <label for="c7"><input type="checkbox" name="checkpoints" value="supplky truck" id="c7">Supply Truck</label>
-                        <label for="c8"><input type="checkbox" name="checkpoints" value="ramp exchange truck" id="c8">Ramp Exchange Truck</label>
-                        <label for="c9"><input type="checkbox" name="checkpoints" value="temp check ice trailer" id="c9">Temp Check Ice Trailer</label>
-                        <label for="c10"><input type="checkbox" name="checkpoints" value="temp check coolers" id="c10">Temp Check Coolers</label>
-                      </div>
-                  </div>
-
-        <input type="submit">
+        <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
+        <label>Trucks for the day:</label>
+        <input type="text" class="form-control" placeholder="# Trucks" name="trucksTarget">
+        <label>Trucks in Service at the moment:</label>
+        <input type="text" class="form-control" placeholder="# Trucks in service" name="trucksInService">
+      </div>
+      <div class="checkboxes-col">
+        <label><input type="hidden" name="checkpoints" value="0" id="supplyRoomDelivery"></label>
+        <label><input type="checkbox" name="checkpoints" value="1" id="supplyRoomDelivery">Supply Room Delivery</label>
+        <label><input type="hidden" name="checkpoints" value="0" id="warehouseDelivery"></label>
+        <label><input type="checkbox" name="checkpoints" value="1" id="warehouseDelivery">501 Warehouse Delivery</label>
+        <label><input type="hidden" name="checkpoints" value="0" id="icer"></label>
+        <label><input type="checkbox" name="checkpoints" value="1" id="icer">Icer</label>
+        <label><input type="hidden" name="checkpoints" value="flight checker" id="0"></label>
+        <label><input type="checkbox" name="checkpoints" value="flight checker" id="1">Flight Checker</label>
+        <label><input type="hidden" name="checkpoints" value="0" id="qcp"></label>
+        <label><input type="checkbox" name="checkpoints" value="1" id="qcp">QCP</label>
+      </div>
+      <div class="checkboxes-col">
+        <label><input type="checkbox" name="checkpoints" value="M&P ids" id="c6">M&P IDS</label>
+        <label><input type="checkbox" name="checkpoints" value="supplky truck" id="c7">Supply Truck</label>
+        <label><input type="checkbox" name="checkpoints" value="ramp exchange truck" id="c8">Ramp Exchange Truck</label>
+        <label><input type="checkbox" name="checkpoints" value="temp check ice trailer" id="c9">Temp Check Ice Trailer</label>
+        <label><input type="checkbox" name="checkpoints" value="temp check coolers" id="c10">Temp Check Coolers</label>
+      </div>
+    </div>
+    <input type="submit" value="send">
     </form>
-
-<h4>test area: <%= pulseCheck.currentStaffingLevels %></h4>   <!-- test variable output so i can check it without leaving the page-->
 
     <div class="mt-lg">
         <h5>Your current tracked staffing</h5>
@@ -90,13 +97,14 @@
             <% }) %>    
         </ul>
     </div>
-  
 <!-- 
           <div class="d-grid mt-3">
           <button type="submit" class="btn btn-danger">Submit</button>
           </div>
         </form> -->
 
+
+    </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
