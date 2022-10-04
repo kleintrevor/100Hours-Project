@@ -13,7 +13,7 @@
     <label>Enter your target staffing levels:</label>
         <input class="staffing" type="text" placeholder="Staffing #" name='targetStaffingLevels'>
     <label>Enter your current staffing levels:</label>
-        <input class="staffing" type="text" placeholder="Staffing #" name='pulseCheckItem'>
+        <input class="staffing" type="text" placeholder="Staffing #" name='currentStaffingLevels'>
         
     <div class="departmentInput">
       <div >
@@ -63,26 +63,21 @@
         <input type="text" class="form-control" placeholder="# Trucks in service" name="trucksInService">
       </div>
       <div class="checkboxes-col">
-        <label><input type="hidden" name="checkpoints" value="0" id="supplyRoomDelivery"></label>
-        <label><input type="checkbox" name="checkpoints" value="1" id="supplyRoomDelivery">Supply Room Delivery</label>
-        <label><input type="hidden" name="checkpoints" value="0" id="warehouseDelivery"></label>
-        <label><input type="checkbox" name="checkpoints" value="1" id="warehouseDelivery">501 Warehouse Delivery</label>
-        <label><input type="hidden" name="checkpoints" value="0" id="icer"></label>
-        <label><input type="checkbox" name="checkpoints" value="1" id="icer">Icer</label>
-        <label><input type="hidden" name="checkpoints" value="flight checker" id="0"></label>
-        <label><input type="checkbox" name="checkpoints" value="flight checker" id="1">Flight Checker</label>
-        <label><input type="hidden" name="checkpoints" value="0" id="qcp"></label>
-        <label><input type="checkbox" name="checkpoints" value="1" id="qcp">QCP</label>
+        <label><input type="checkbox" name="supplyRoomDelivery"  id="supplyRoomDelivery"  >Supply Room Delivery</label>
+        <label><input type="checkbox" name="warehouseDelivery"  id="warehouseDelivery">501 Warehouse Delivery</label>
+        <label><input type="checkbox" name="icer"  id="icer">Icer</label>
+        <label><input type="checkbox" name="flight checker" id="flightChecker">Flight Checker</label>
+        <label><input type="checkbox" name="qcp"  id="qcp">QCP</label>
       </div>
       <div class="checkboxes-col">
-        <label><input type="checkbox" name="checkpoints" value="M&P ids" id="c6">M&P IDS</label>
-        <label><input type="checkbox" name="checkpoints" value="supplky truck" id="c7">Supply Truck</label>
-        <label><input type="checkbox" name="checkpoints" value="ramp exchange truck" id="c8">Ramp Exchange Truck</label>
-        <label><input type="checkbox" name="checkpoints" value="temp check ice trailer" id="c9">Temp Check Ice Trailer</label>
-        <label><input type="checkbox" name="checkpoints" value="temp check coolers" id="c10">Temp Check Coolers</label>
+        <label><input type="checkbox" name="mpIds"  id="mpIds" >M&P IDS</label>
+        <label><input type="checkbox" name="supplyTruck" id="supplyTruck">Supply Truck</label>
+        <label><input type="checkbox" name="rampExchangeTruck" id="rampExchangeTruck">Ramp Exchange Truck</label>
+        <label><input type="checkbox" name="tempIceTrailer" id="tempIceTrailer">Temp Check Ice Trailer</label>
+        <label><input type="checkbox" name="tempCoolers" id="tempCoolers">Temp Check Coolers</label>
       </div>
     </div>
-    <input type="submit" value="send">
+    <input type="submit" value="Save Changes">
     </form>
 
     <div class="mt-lg">
@@ -104,7 +99,7 @@
         </form> -->
 
 
-    </script>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -68,17 +68,7 @@ async function markIncomplete() {
   }
 }
 
-$('#checkbox-value').text($('#checkpoints').val());
 
-$("#checkpoints").on('change', function() {
-  if ($(this).is(':checked')) {
-    $(this).attr('value', 'true');
-  } else {
-    $(this).attr('value', 'false');
-  }
-  
-  $('#checkbox-value').text($('#checkbox1').val());
-});
 
 // For the log in form to toggle between login and register
 $('.message a').click(function () {
