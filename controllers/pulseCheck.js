@@ -28,11 +28,16 @@ module.exports = {
         complexNumber: req.body.complexNumber,
         trucksTarget: req.body.trucksTarget,
         trucksInService: req.body.trucksInService,
-        supplyRoomDelivery: req.body.supplyRoomDelivery,
-        warehouseDelivery: req.body.warehouseDelivery,
-        icer: req.body.icer,
-        flightChecker: req.body.flightChecker,
-        qcp: req.body.qcp,
+        supplyRoomDelivery: req.body.supplyRoomDelivery ? true : false,
+        warehouseDelivery: req.body.warehouseDelivery  ? true : false,
+        icer: req.body.icer ? true : false,
+        flightChecker: req.body.flightChecker  ? true : false,
+        qcp: req.body.qcp  ? true : false,
+        mpIds: req.body.mpIds ? true : false,
+        supplyTruck: req.body.supplyTruck ? true : false,
+        rampExchangeTruck: req.body.rampExchangeTruck ? true : false,
+        tempIceTrailer: req.body.tempIceTrailer ? true : false,
+        tempCoolers: req.body.tempCoolers ? true : false,
       });
       console.log('Pulse check has been entered!');
       res.redirect('/pulseCheck');
