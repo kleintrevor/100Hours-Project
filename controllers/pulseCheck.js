@@ -23,7 +23,7 @@ module.exports = {
         departmentId: req.user.department,
         date: req.body.date,
         targetStaffingLevels: req.body.targetStaffingLevels,
-        currentStaffingLevels: req.body.pulseCheckItem,
+        currentStaffingLevels: req.body.currentStaffingLevels,
         complexTime: req.body.complexTime,
         complexNumber: req.body.complexNumber,
         trucksTarget: req.body.trucksTarget,
