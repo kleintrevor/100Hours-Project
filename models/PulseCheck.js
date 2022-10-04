@@ -63,6 +63,26 @@ const PulseCheckSchema = new mongoose.Schema({
     type: Boolean, 
     required: false,
   },
+  mpIds: {
+    type: Boolean, 
+    required: false,
+  },
+  supplyTruck: {
+    type: Boolean, 
+    required: false,
+  },
+  rampExchangeTruck: {
+    type: Boolean, 
+    required: false,
+  },
+  tempIceTrailer: {
+    type: Boolean, 
+    required: false,
+  },
+  tempCoolers: {
+    type: Boolean, 
+    required: false,
+  },
 });
 
 module.exports = mongoose.model('PulseCheck', PulseCheckSchema);
