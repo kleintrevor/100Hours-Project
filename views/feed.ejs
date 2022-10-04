@@ -5,6 +5,7 @@
 
 <body>
     <h4>Attendance</h4>
+    
 <!-- <ul >
     <% feedItems.forEach( el => { %> 
             <li class='cell' data-id='<%=el._id%>'>
@@ -26,67 +27,113 @@
         <div id="div504" class="actual">Actual</div>      <!-- Actual -->
         <div id="div505" class="target">Target</div>      <!-- Target -->
         <div id="div506" class="actual">Actual</div>      <!-- Actual -->
+
         <!-- Dock AM staffing -->
         <div id="div507" class="col_green">            
-            <% if (feedItems[0].departmentId = "Dock" ) { %>
-                <%= feedItems[0].targetStaffingLevels %>
-            <%} else { %>
-                &#10006;<% } %>
-        </div>    <!-- first column -->   <!-- GREEN column -->
+            <% if (feedItems[0].departmentId = "AM - Dock" ) { %>
+                <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>     <!-- first column -->   <!-- GREEN column -->
         <div id="div508" class="col_white"> 
-            <% if (feedItems[0].departmentId = "Dock" ) { %>
-               <%= feedItems[0].currentStaffingLevel %>
-             <%} else { %>
-                 &#10006;<% } %>
-        </div>
+            <% if (feedItems[0].departmentId = "AM - Dock" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
         <!-- Dock PM staffing -->
         <div id="div509" class="col_green">             
-            <% if (feedItems[0].departmentId = "Make & Pack" ) { %>
-                <%= feedItems[0].targetStaffingLevels %>
-            <%} else { %>
-                &#10006;<% } %>
+            <% if (feedItems[0].departmentId = "PM - Dock" ) { %>
+                <%= feedItems[0].targetStaffingLevels %> <%} %>
         </div>  
         <div id="div510" class="col_white"> 
-            <% if (feedItems[0].departmentId = "Make & Pack" ) { %>
-               <%= feedItems[0].currentStaffingLevel %>
-             <%} else { %>
-                 &#10006;<% } %>
-        </div>
+            <% if (feedItems[0].departmentId = "PM - Dock" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
+
+        <!-- Make & Pack AM staffing -->
         <div id="div511" class="col_green">            
-            <% if (feedItems[0].departmentId = "Pick & Pack" ) { %>
-                <%= feedItems[0].targetStaffingLevels %>
-            <%} else { %>
-                &#10006;<% } %>
+            <% if (feedItems[0].departmentId = "AM - Make & Pack" ) { %>
+                <%= feedItems[0].targetStaffingLevels %> <%} %>
         </div>  <!-- first column -->   <!-- GREEN column -->
         <div id="div512" class="col_white"> 
-            <% if (feedItems[0].departmentId = "Pick & Pack" ) { %>
-               <%= feedItems[0].currentStaffingLevel %>
-             <%} else { %>
-                 &#10006;<% } %>
-        </div>
-        <div id="div513" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
+            <% if (feedItems[0].departmentId = "AM - Make & Pack" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
+        <!-- Make & Pack PM staffing -->
+        <div id="div513" class="col_green">            
+            <% if (feedItems[0].departmentId = "PM - Make & Pack" ) { %>
+                <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>  
         <div id="div514" class="col_white"> 
-            <% if (feedItems[0].departmentId = "Pick & Pack" ) { %>
-               <%= feedItems[0].currentStaffingLevel %>
+            <% if (feedItems[0].departmentId = "PM - Make & Pack" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
+
+        <!-- Pick & Pack AM staffing -->
+        <div id="div515" class="col_green">            
+            <% if (feedItems[0].departmentId = "AM - Pick & Pack" ) { %>
+                <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>  <!-- first column -->   <!-- GREEN column -->
+        <div id="div516" class="col_white"> 
+            <% if (feedItems[0].departmentId = "AM - Pick & Pack" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
+        <!-- Pick & Pack PM staffing -->
+        <div id="div517" class="col_green"> 
+            <% if (feedItems[0].departmentId = "PM - Pick & Pack" ) { %>
+               <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>  
+        <div id="div518" class="col_white"> 
+            <% if (feedItems[0].departmentId = "PM - Pick & Pack" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
+        <div id="div519" class="col_green"> 
+            <% if (feedItems[0].departmentId = "AM - Wash & Pack" ) { %>
+               <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>    <!-- first column -->   <!-- GREEN column -->
+        <div id="div520" class="col_white"> 
+            <% if (feedItems[0].departmentId = "AM - Wash & Pack" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
+        <div id="div521" class="col_green"> 
+            <% if (feedItems[0].departmentId = "PM - Wash & Pack" ) { %>
+               <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>  
+        <div id="div522" class="col_white"> 
+            <% if (feedItems[0].departmentId = "PM - Wash & Pack" ) { %>
+               <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>  
+        <div id="div523" class="col_green"> 
+            <% if (feedItems[0].departmentId = "AM - Seal" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  <!-- first column -->   <!-- GREEN column -->
+        <div id="div524" class="col_white"> 
+            <% if (feedItems[0].departmentId = "AM - Seal" ) { %>
+               <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>  
+        <div id="div525" class="col_green"> 
+            <% if (feedItems[0].departmentId = "PM - Seal" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
+        <div id="div526" class="col_white"> 
+            <% if (feedItems[0].departmentId = "PM - Seal" ) { %>
+               <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>  
+        <div id="div527" class="col_green"> 
+            <% if (feedItems[0].departmentId = "AM - Transportation" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>    <!-- first column -->
+        <div id="div528" class="col_white"> 
+            <% if (feedItems[0].departmentId = "AM - Transportation" ) { %>
+               <%= feedItems[0].targetStaffingLevels %> <%} %>
+        </div>  
+        <div id="div529" class="col_green"> 
+            <% if (feedItems[0].departmentId = "PM - Transportation" ) { %>
+               <%= feedItems[0].currentStaffingLevel %> <%} %>
+        </div>  
+        <div id="div530" class="col_white"> 
+            <% if (feedItems[0].departmentId = "PM - Transportation" ) { %>
+               <%= feedItems[0].targetStaffingLevels %>
              <%} else { %>
                  &#10006;<% } %>
         </div>
-        <div id="div515" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div516" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
-        <div id="div517" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
-        <div id="div518" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
-        <div id="div519" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div520" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
-        <div id="div521" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
-        <div id="div522" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
-        <div id="div523" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->   <!-- GREEN column -->
-        <div id="div524" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
-        <div id="div525" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
-        <div id="div526" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
-        <div id="div527" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>  <!-- first column -->
-        <div id="div528" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
-        <div id="div529" class="col_green"> <%= feedItems[0].targetStaffingLevels %></div>
-        <div id="div530" class="col_white"><%= feedItems[0].currentStaffingLevels %> </div>
     </section>
 
     <h4> Departmental Updates</h4>
@@ -214,117 +261,317 @@
         <div id="div201">Supply Room Delivery</div>  <!-- first column -->
         <div id="div202" class="col_green"> &#10004;</div>  <!-- GREEN column -->
         <div id="div203" class="col_white"> 
-            <% if (feedItems[0].supplyRoomDelivery = true ) { %>
+            <% if (feedItems[0].supplyRoomDelivery === true ) { %>
                 &#10004; 
             <%} else { %>
                 &#10006;<% } %>
             </div>
         <div id="div204" class="col_green">&#10004; </div>
-        <div id="div205" class="col_white"></div>
+        <div id="div205" class="col_white"> 
+            <% if (feedItems[0].supplyRoomDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div206" class="col_green">&#10004; </div>
-        <div id="div207" class="col_white"> <%= feedItems[0].icer %> </div>
+        <div id="div207" class="col_white"> 
+            <% if (feedItems[0].supplyRoomDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div208" class="col_green">&#10004; </div>
-        <div id="div209" class="col_white"> <%= feedItems[0].flightChecker %> </div>
+        <div id="div209" class="col_white"> 
+            <% if (feedItems[0].supplyRoomDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div210" class="col_green">&#10004; </div>
-        <div id="div211" class="col_white"> <%= feedItems[0].qcp %> </div>
+        <div id="div211" class="col_white"> 
+            <% if (feedItems[0].supplyRoomDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div212" class="col_green">&#10004; </div>
-        <div id="div213" class="col_white"> <%= feedItems[0].flightChecker %>  </div>
+        <div id="div213" class="col_white"> 
+            <% if (feedItems[0].supplyRoomDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div214" class="col_green">&#10004; </div>
-        <div id="div215" class="col_white"> <%= feedItems[0].flightChecker %>  </div>
+        <div id="div215" class="col_white"> 
+            <% if (feedItems[0].supplyRoomDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- supply room delivery row end -->
 
         <!-- 501 warehouse row begin -->
         <div id="div216">501 Delivery</div>  <!-- first column -->
         <div id="div217" class="col_green"> &#10004; </div>  <!-- GREEN column -->
         <div id="div218" class="col_white">   
-            <% if (feedItems[0].warehouseDelivery = true ) { %>
+            <% if (feedItems[0].warehouseDelivery === true ) { %>
                 &#10004;
             <%} else { %>
                 &#10006;<% } %>  </div>
         <div id="div219" class="col_green"> &#10004; </div>
-        <div id="div220" class="col_white"> </div>
+        <div id="div220" class="col_white"> 
+            <% if (feedItems[0].warehouseDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div221" class="col_green"> &#10004; </div>
-        <div id="div222" class="col_white"> </div>
+        <div id="div222" class="col_white"> 
+            <% if (feedItems[0].warehouseDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div223" class="col_green"> &#10004; </div>
-        <div id="div224" class="col_white"> </div>
+        <div id="div224" class="col_white"> 
+            <% if (feedItems[0].warehouseDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div225" class="col_green"> &#10004; </div>
-        <div id="div226" class="col_white">  </div>
+        <div id="div226" class="col_white"> 
+            <% if (feedItems[0].warehouseDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div227" class="col_green"> &#10004; </div>
-        <div id="div228" class="col_white"> </div>
+        <div id="div228" class="col_white"> 
+            <% if (feedItems[0].warehouseDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div229" class="col_green"> &#10004; </div>
-        <div id="div230" class="col_white"> </div>
+        <div id="div230" class="col_white"> 
+            <% if (feedItems[0].warehouseDelivery === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!--  501 delivery row end -->
 
         <!-- Icer row begin -->
         <div id="div231">Icer</div>  <!-- first column -->
         <div id="div232" class="col_green"> &#10004; </div>  <!-- GREEN column -->
-        <div id="div233" class="col_white"> </div>
+        <div id="div233" class="col_white"> 
+            <% if (feedItems[0].icer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div234" class="col_green"> &#10004; </div>
-        <div id="div235" class="col_white"> </div>
+        <div id="div235" class="col_white"> 
+            <% if (feedItems[0].icer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div236" class="col_green"> &#10004; </div>
-        <div id="div237" class="col_white"> </div>
+        <div id="div237" class="col_white"> 
+            <% if (feedItems[0].icer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div238" class="col_green"> &#10004; </div>
-        <div id="div239" class="col_white"> </div>
+        <div id="div239" class="col_white"> 
+            <% if (feedItems[0].icer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div240" class="col_green"> &#10004; </div>
-        <div id="div241" class="col_white"> </div>
+        <div id="div241" class="col_white"> 
+            <% if (feedItems[0].icer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div242" class="col_green"> &#10004; </div>
-        <div id="div243" class="col_white"> </div>
+        <div id="div243" class="col_white"> 
+            <% if (feedItems[0].icer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div244" class="col_green"> &#10004; </div>
-        <div id="div245" class="col_white"> </div>
+        <div id="div245" class="col_white"> 
+            <% if (feedItems[0].icer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- icer row end -->
 
         <!-- flight checker row begin -->
         <div id="div246">Flight Checker</div>  <!-- first column -->
         <div id="div247" class="col_green"> &#10004; </div>  <!-- GREEN column -->
-        <div id="div248" class="col_white"> </div>
+        <div id="div248" class="col_white"> 
+            <% if (feedItems[0].flightChecker === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div249" class="col_green"> &#10004; </div>
-        <div id="div250" class="col_white"> </div>
+        <div id="div250" class="col_white"> 
+            <% if (feedItems[0].flightChecker === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div251" class="col_green"> &#10004; </div>
-        <div id="div252" class="col_white"> </div>
+        <div id="div252" class="col_white"> 
+            <% if (feedItems[0].flightChecker === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div253" class="col_green"> &#10004; </div>
-        <div id="div254" class="col_white"> </div>
+        <div id="div254" class="col_white"> 
+            <% if (feedItems[0].flightChecker === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div255" class="col_green"> &#10004; </div>
-        <div id="div256" class="col_white"> </div>
+        <div id="div256" class="col_white"> 
+            <% if (feedItems[0].flightChecker === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div257" class="col_green"> &#10004; </div>
-        <div id="div258" class="col_white"> </div>
+        <div id="div258" class="col_white"> 
+            <% if (feedItems[0].flightChecker === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div259" class="col_green"> &#10004; </div>
-        <div id="div260" class="col_white"> </div>
+        <div id="div260" class="col_white"> 
+            <% if (feedItems[0].flightChecker === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- flight checker row end -->
 
         <!-- QCP row begin -->
         <div id="div261">QCP</div>  <!-- first column -->
         <div id="div262" class="col_green"> &#10004; </div>  <!-- GREEN column -->
-        <div id="div263" class="col_white"> </div>
+        <div id="div263" class="col_white"> 
+            <% if (feedItems[0].qcp === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div264" class="col_green"> &#10004; </div>
-        <div id="div265" class="col_white"> </div>
+        <div id="div265" class="col_white"> 
+            <% if (feedItems[0].qcp === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div266" class="col_green"> &#10004; </div>
-        <div id="div267" class="col_white"> </div>
+        <div id="div267" class="col_white"> 
+            <% if (feedItems[0].qcp === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div268" class="col_green"> &#10004; </div>
-        <div id="div269" class="col_white"> </div>
+        <div id="div269" class="col_white"> 
+            <% if (feedItems[0].qcp === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div270" class="col_green"> &#10004; </div>
-        <div id="div271" class="col_white"> </div>
+        <div id="div271" class="col_white"> 
+            <% if (feedItems[0].qcp === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div272" class="col_green"> &#10004; </div>
-        <div id="div273" class="col_white"> </div>
+        <div id="div273" class="col_white"> 
+            <% if (feedItems[0].qcp === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div274" class="col_green"> &#10004; </div>
-        <div id="div275" class="col_white"> </div>
+        <div id="div275" class="col_white"> 
+            <% if (feedItems[0].qcp === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- QCP row end -->
 
         <!-- M&P IDS row begin -->
         <div id="div276">M&P IDS</div>  <!-- first column -->
         <div id="div277" class="col_green"> &#10004; </div> <!-- GREEN column -->
-        <div id="div278" class="col_white"> </div>
+        <div id="div278" class="col_white"> 
+            <% if (feedItems[0].mpIds === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div279" class="col_green"> &#10004; </div>
-        <div id="div280" class="col_white"> </div>
+        <div id="div280" class="col_white"> 
+            <% if (feedItems[0].mpIds === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div281" class="col_green"> &#10004; </div>
-        <div id="div282" class="col_white"> </div>
+        <div id="div282" class="col_white"> 
+            <% if (feedItems[0].mpIds === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div283" class="col_green"> &#10004; </div>
-        <div id="div284" class="col_white"> </div>
+        <div id="div284" class="col_white"> 
+            <% if (feedItems[0].mpIds === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div285" class="col_green"> &#10004; </div>
-        <div id="div286" class="col_white"> </div>
+        <div id="div286" class="col_white"> 
+            <% if (feedItems[0].mpIds === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div287" class="col_green"> &#10004; </div>
-        <div id="div288" class="col_white"> </div>
+        <div id="div288" class="col_white"> 
+            <% if (feedItems[0].mpIds === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div289" class="col_green"> &#10004; </div>
-        <div id="div290" class="col_white"> </div>
+        <div id="div290" class="col_white"> 
+            <% if (feedItems[0].mpIds === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- M&P IDS row end -->
 
         <!--Trucks In Service row begin -->
@@ -348,73 +595,213 @@
         <!-- Supply Truck row begin -->
         <div id="div306">Supply Truck</div>  <!-- first column -->
         <div id="div307" class="col_green"> &#10004; </div>  <!-- GREEN column -->
-        <div id="div308" class="col_white"> </div>
+        <div id="div308" class="col_white"> 
+            <% if (feedItems[0].supplyTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div309" class="col_green"> &#10004; </div>
-        <div id="div310" class="col_white"> </div>
+        <div id="div310" class="col_white"> 
+            <% if (feedItems[0].supplyTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div311" class="col_green"> &#10004; </div>
-        <div id="div312" class="col_white"> </div>
+        <div id="div312" class="col_white"> 
+            <% if (feedItems[0].supplyTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div313" class="col_green"> &#10004; </div>
-        <div id="div314" class="col_white"> </div>
+        <div id="div314" class="col_white"> 
+            <% if (feedItems[0].supplyTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div315" class="col_green"> &#10004; </div>
-        <div id="div316" class="col_white"> </div>
+        <div id="div316" class="col_white"> 
+            <% if (feedItems[0].supplyTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div317" class="col_green"> &#10004; </div>
-        <div id="div318" class="col_white"> </div>
+        <div id="div318" class="col_white"> 
+            <% if (feedItems[0].supplyTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div319" class="col_green"> &#10004; </div>
-        <div id="div320" class="col_white"> </div>
+        <div id="div320" class="col_white"> 
+            <% if (feedItems[0].supplyTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- Supply Truck row end -->
 
         <!-- Ramp Exchange Truck row begin -->
         <div id="div321">Ramp Exchange Truck</div>  <!-- first column -->
         <div id="div322" class="col_green"> &#10004; </div>  <!-- GREEN column -->
-        <div id="div323" class="col_white"> </div>
+        <div id="div323" class="col_white"> 
+            <% if (feedItems[0].rampExchangeTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div324" class="col_green"> &#10004; </div>
-        <div id="div325" class="col_white"> </div>
+        <div id="div325" class="col_white"> 
+            <% if (feedItems[0].rampExchangeTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div326" class="col_green"> &#10004; </div>
-        <div id="div327" class="col_white"> </div>
+        <div id="div327" class="col_white"> 
+            <% if (feedItems[0].rampExchangeTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div328" class="col_green"> &#10004; </div>
-        <div id="div329" class="col_white"> </div>
+        <div id="div329" class="col_white"> 
+            <% if (feedItems[0].rampExchangeTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div330" class="col_green"> &#10004; </div>
-        <div id="div331" class="col_white"> </div>
+        <div id="div331" class="col_white"> 
+            <% if (feedItems[0].rampExchangeTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div332" class="col_green"> &#10004; </div>
-        <div id="div333" class="col_white"> </div>
+        <div id="div333" class="col_white"> 
+            <% if (feedItems[0].rampExchangeTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div334" class="col_green"> &#10004; </div>
-        <div id="div335" class="col_white"> </div>
+        <div id="div335" class="col_white"> 
+            <% if (feedItems[0].rampExchangeTruck === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- Ramp Exchange Truck row end -->
 
         <!-- Temp Ice Trailer row begin -->
         <div id="div336">Temp Ice Trailer</div>  <!-- first column -->
         <div id="div337" class="col_green"> &#10004; </div>  <!-- GREEN column -->
-        <div id="div338" class="col_white"> </div>
+        <div id="div338" class="col_white"> 
+            <% if (feedItems[0].tempIceTrailer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div339" class="col_green"> &#10004; </div>
-        <div id="div340" class="col_white"> </div>
+        <div id="div340" class="col_white"> 
+            <% if (feedItems[0].tempIceTrailer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div341" class="col_green"> &#10004; </div>
-        <div id="div342" class="col_white"> </div>
+        <div id="div342" class="col_white"> 
+            <% if (feedItems[0].tempIceTrailer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div343" class="col_green"> &#10004; </div>
-        <div id="div344" class="col_white"> </div>
+        <div id="div344" class="col_white"> 
+            <% if (feedItems[0].tempIceTrailer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div345" class="col_green"> &#10004; </div>
-        <div id="div346" class="col_white"> </div>
+        <div id="div346" class="col_white"> 
+            <% if (feedItems[0].tempIceTrailer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div347" class="col_green"> &#10004; </div>
-        <div id="div348" class="col_white"> </div>
+        <div id="div348" class="col_white"> 
+            <% if (feedItems[0].tempIceTrailer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div349" class="col_green"> &#10004; </div>
-        <div id="div350" class="col_white"> </div>
+        <div id="div350" class="col_white"> 
+            <% if (feedItems[0].tempIceTrailer === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- Temp Ice Trailer row end -->
 
         <!-- Temp Coolers row begin -->
         <div id="div351">Temp Coolers</div>  <!-- first column -->
         <div id="div352" class="col_green"> &#10004; </div> <!-- GREEN column -->
-        <div id="div353" class="col_white"> </div>
+        <div id="div353" class="col_white"> 
+            <% if (feedItems[0].tempCoolers === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div354" class="col_green"> &#10004; </div>
-        <div id="div355" class="col_white"> </div>
+        <div id="div355" class="col_white"> 
+            <% if (feedItems[0].tempCoolers === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div356" class="col_green"> &#10004; </div>
-        <div id="div357" class="col_white"> </div>
+        <div id="div357" class="col_white"> 
+            <% if (feedItems[0].tempCoolers === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div358" class="col_green"> &#10004; </div>
-        <div id="div359" class="col_white"> </div>
+        <div id="div359" class="col_white"> 
+            <% if (feedItems[0].tempCoolers === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div360" class="col_green"> &#10004; </div>
-        <div id="div361" class="col_white"> </div>
+        <div id="div361" class="col_white"> 
+            <% if (feedItems[0].tempCoolers === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div362" class="col_green"> &#10004; </div>
-        <div id="div363" class="col_white"> </div>
+        <div id="div363" class="col_white"> 
+            <% if (feedItems[0].tempCoolers === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <div id="div364" class="col_green"> &#10004; </div>
-        <div id="div365" class="col_white"> </div>
+        <div id="div365" class="col_white"> 
+            <% if (feedItems[0].tempCoolers === true ) { %>
+                &#10004; 
+            <%} else { %>
+                &#10006;<% } %>
+            </div>
         <!-- Temp Coolers row end -->        
     </section>
 </body>
