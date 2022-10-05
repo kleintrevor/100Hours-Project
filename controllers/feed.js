@@ -5,10 +5,7 @@ module.exports = {
   getFeed: async (req, res) => {
     console.log(req.user);
     try {
-      const feedItems = await PulseCheck.find({         
-        userId: req.user.id,
-
-      });
+      const feedItems = await PulseCheck.find({ });
       console.log(`these are the feed items ${feedItems}`);
       res.render('feed.ejs', {
         feedItems: feedItems, 
