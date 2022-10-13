@@ -705,7 +705,7 @@ input[type=text], select {
   max-width: 300px;
   margin: 0 auto;
 } */
-
+/* 
 .container:before,
 .container:after {
   content: '';
@@ -738,7 +738,7 @@ input[type=text], select {
 
 .container .info span .fa {
   color: #ef3b3a;
-}
+} */
 
 select {
   height: 26px;
@@ -764,6 +764,8 @@ input[type=checkbox]{
   display: inline-block;
 }
 body {
+  padding-top: 100px;
+  margin: 0;
   background: DCDFE5; /* fallback for old browsers */
   background: rgb(204, 204, 204);
   background: linear-gradient(
@@ -774,6 +776,9 @@ body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .tracked-weights {
