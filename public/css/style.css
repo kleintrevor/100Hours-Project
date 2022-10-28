@@ -760,11 +760,13 @@ input[type=checkbox]{
 }
 
 .checkboxes-col{
-  width: 200px;
+  width: 250px;
   display: inline-block;
 }
 body {
+  max-width: 100%;
   padding-top: 100px;
+  padding-left: 0.75vw;
   margin: 0;
   background: DCDFE5; /* fallback for old browsers */
   background: rgb(204, 204, 204);
