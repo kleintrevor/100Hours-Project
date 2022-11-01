@@ -13,14 +13,7 @@ const PulseCheckSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  targetStaffingLevels: {
-    type: Number,
-    required: false,
-  },
-  currentStaffingLevels: {
-    type: Number,
-    required: false,
-  },
+  
   complexTime:{
     type: String,
     required: false,
@@ -37,10 +30,6 @@ const PulseCheckSchema = new mongoose.Schema({
     type: Number,
     required: false,
   },
-
-  // Below are the checkboxes.  I still need to get these to return properly. 
-  // It looks like i'll need some basic code to validate that the check box is checked or unchecked otherwise it always returns true
-
   supplyRoomDelivery: {
     type: Boolean, 
     required: false,
