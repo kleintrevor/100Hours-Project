@@ -1,4 +1,4 @@
-<h2>100Hours Project</h2>
+<h2>Manager on Duty 0.1</h2>
 
 Website will optimize the time spent reporting MoD updates between departments.
 
