@@ -1,54 +1,33 @@
 const mongoose = require('mongoose');
 
 const CheckpointSchema = new mongoose.Schema({
-    trucksTarget: {
-        type: Number,
-        required: false,
-      },
-      trucksInService: {
-        type: Number,
-        required: false,
-      },
-      supplyRoomDelivery: {
-        type: Boolean, 
-        required: false,
-      },
-      warehouseDelivery: {
-        type: Boolean, 
-        required: false,
-      },
-      icer:{
-        type: Boolean, 
-        required: false,
-      },
-      flightChecker: {
-        type: Boolean, 
-        required: false, 
-      },
-      qcp: {
-        type: Boolean, 
-        required: false,
-      },
-      mpIds: {
-        type: Boolean, 
-        required: false,
-      },
-      supplyTruck: {
-        type: Boolean, 
-        required: false,
-      },
-      rampExchangeTruck: {
-        type: Boolean, 
-        required: false,
-      },
-      tempIceTrailer: {
-        type: Boolean, 
-        required: false,
-      },
-      tempCoolers: {
-        type: Boolean, 
-        required: false,
-      },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  complexTime: {
+    actual: { type: Number, required: true },
+    target: { type: Number, required: true }
+  },
+  attendance: {
+    actual: { type: Number, required: true },
+    target: { type: Number, required: true }
+  },
+  supplyRoomDelivery: { type: Boolean, required: true },
+  warehouseDelivery: { type: Boolean, required: true },
+  icer: { type: Boolean, required: true },
+  flightChecker: { type: Boolean, required: true },
+  qcp: { type: Boolean, required: true },
+  mpids: { type: Boolean, required: true },
+  trucksInService: {
+    actual: { type: Number, required: true },
+    target: { type: Number, required: true }
+  },
+  supplyTruck: { type: Boolean, required: true },
+  rampExchange: { type: Boolean, required: true },
+  tempIceTrailer: { type: Boolean, required: true },
+  tempCoolers: { type: Boolean, required: true }
 });
 
 module.exports = mongoose.model('Checkpoint', CheckpointSchema);

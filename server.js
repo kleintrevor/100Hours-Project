@@ -17,15 +17,22 @@ const { response } = require('express');
 
 require('dotenv').config({ path: './config/.env' });
 
-// let db, // shorten up variables so less typing (empty)
-//     dbConnectionStr = process.env.DB_STRING,  // look here for the environmental variable connection string
-//     dbName = 'MoD' // variable assignment
+// let db, 
+// shorten up variables so less typing (empty)
+//     dbConnectionStr = process.env.DB_STRING,  
+// look here for the environmental variable connection string
+//     dbName = 'MoD' 
+// variable assignment
 
-// MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }) // connect to the database using string above
+// MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }) 
+// connect to the database using string above
 // // unifiedTopology - opt in for a new verison of MongoDB connection (stays active), better performance
-// .then(client => {  // after connecting then do: (function)
-//     console.log(`Connected to ${dbName} Database`) // let us know we connected correctly
-//     db = client.db(dbName)  // assign the db variable from line 8
+// .then(client => {  
+// after connecting then do: (function)
+//     console.log(`Connected to ${dbName} Database`) 
+// let us know we connected correctly
+//     db = client.db(dbName)  
+// assign the db variable from line 8
 // })
 
 // Passport config

@@ -1,5 +1,5 @@
 <%- include('partials/head') %>
-
+<%- include('partials/header') %>
 
   <body>
     <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
@@ -17,21 +17,18 @@
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Password" />
           <input type="password" name="confirmPassword" placeholder="Confirm Password"/>
+          <select name="shift" id="shift"  >
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select> 
           <select name="department" id="department"  >
-            <option value="AM - Make & Pack">AM - Make & Pack</option>
-            <option value="AM - Pick & Pack">AM - Pick & Pack</option>
-            <option value="AM - Wash & Pack">AM - Wash & Pack</option>
-            <option value="AM - Dock">AM - Dock</option>
-            <option value="AM - Seal">AM - Seal</option>
-            <option value="AM - Transportation">AM - Transportation</option> 
-            <option value="AM - MoD">AM - Manager on Duty</option>
-            <option value="PM - Make & Pack">PM - Make & Pack</option>
-            <option value="PM - Pick & Pack">PM - Pick & Pack</option>
-            <option value="PM - Wash & Pack">PM - Wash & Pack</option>
-            <option value="PM - Dock">PM - Dock</option>
-            <option value="PM - Seal">PM - Seal</option>
-            <option value="PM - Transportation">PM - Transportation</option>
-            <option value="PM - MoD">PM - Manager on Duty</option>
+            <option value="Make & Pack">Make & Pack</option>
+            <option value="Pick & Pack">Pick & Pack</option>
+            <option value="Wash & Pack">Wash & Pack</option>
+            <option value="Dock">Dock</option>
+            <option value="Seal">Seal</option>
+            <option value="Transportation">Transportation</option> 
+            <option value="MoD">Manager on Duty</option>
           </select> 
           <button>Submit</button>
           <p class="message">Already registered? <a>Sign In</a></p>
@@ -50,3 +47,4 @@
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
+<%- include('partials/footer') %>

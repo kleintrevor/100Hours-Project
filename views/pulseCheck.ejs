@@ -4,20 +4,53 @@
 <body>
     <% if (user) { %>
         <h3>Hello <%= user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1) %>, please enter the pulse check data for the 
-          <%= user.department %> department:</h3>
+          (<%= user.shift %> - <%= user.department %>) department:</h3>
       <% } %>
 
   <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
     <label>Please enter select todays date below:</label>
-        <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
-    <label>Enter your target staffing levels:</label>
-        <input class="staffing" type="text" placeholder="Staffing #" name='targetStaffingLevels'>
-    <label>Enter your current staffing levels:</label>
-        <input class="staffing" type="text" placeholder="Staffing #" name='currentStaffingLevels'>
-        
-    <div class="departmentInput">
-      <div >
-        <label>What time are you entering for?</label>
+        <input type="date" name="date" id="date" min="1980-01-01" max="2025-01-01" required>
+    <label for="attendanceTarget">Attendance (Target):</label>
+      <input type="number" name="attendanceTarget" id="attendanceTarget" required>
+    <label for="attendanceActual">Attendance (Actual):</label>
+      <input type="number" name="attendanceActual" id="attendanceActual" required> 
+    <label for="complexTimeTarget">Complex Time (Target):</label>
+      <input type="number" name="complexTimeTarget" id="complexTimeTarget" required>
+    <label for="complexTimeActual">Complex Time (Actual):</label>
+      <input type="number" name="complexTimeActual" id="complexTimeActual" required> 
+    <label>Trucks for the day:</label>
+      <input type="text" class="form-control" placeholder="# Trucks" name="trucksInServiceTarget">
+    <label>Trucks in Service at the moment:</label>
+      <input type="text" class="form-control" placeholder="# Trucks in service" name="trucksInServiceActual">
+    <!-- <div class="checkboxes-col">
+      <label><input type="checkbox" name="supplyRoomDelivery" id="supplyRoomDelivery">Supply Room Delivery</label>
+      <label><input type="checkbox" name="warehouseDelivery" id="warehouseDelivery">501 Warehouse Delivery</label>
+      <label><input type="checkbox" name="icer" id="icer">Icer</label>
+      <label><input type="checkbox" name="flight checker" id="flightChecker">Flight Checker</label>
+      <label><input type="checkbox" name="qcp" id="qcp">QCP</label>
+    </div>
+    <div class="checkboxes-col">
+      <label><input type="checkbox" name="mpIds" id="mpIds" >M&P IDS</label>
+      <label><input type="checkbox" name="supplyTruck" id="supplyTruck">Supply Truck</label>
+      <label><input type="checkbox" name="rampExchangeTruck" id="rampExchangeTruck">Ramp Exchange Truck</label>
+      <label><input type="checkbox" name="tempIceTrailer" id="tempIceTrailer">Temp Check Ice Trailer</label>
+      <label><input type="checkbox" name="tempCoolers" id="tempCoolers">Temp Check Coolers</label>
+    </div>  -->
+    <br>
+
+    <input type="submit">
+  </form>
+    <!-- <label>Enter your target staffing levels:</label>
+        <input class="staffing" type="text" placeholder="Staffing #" name='targetStaffingLevels'> -->
+     
+    <!-- <label>Enter your current staffing levels:</label>
+        <input class="staffing" type="text" placeholder="Staffing #" name='currentStaffingLevels'> -->
+
+ 
+    <!-- <div class="departmentInput">
+      <div > -->
+
+        <!-- <label>What time are you entering for?</label>
         <select name="complexTime" id="complexTime" >
             <option value="6:00 AM">6:00 AM</option>
             <option value="8:00 AM">8:00 AM</option>
@@ -26,8 +59,8 @@
             <option value="4:00 PM">4:00 PM</option>
             <option value="7:00 PM">7:00 PM</option>
             <option value="10:00 PM">10:00 PM</option>
-          </select> 
-        <label>What Complex are you on?</label>
+          </select>  -->
+        <!-- <label>What Complex are you on?</label>
         <select name="complexNumber" id="complexNumber" >
             <option value="06">06</option>
             <option value="07">07</option>
@@ -46,17 +79,14 @@
             <option value="20">20</option>
             <option value="21">21</option>
             <option value="22">22</option>
-          </select>
-      </div>
-    </div>
-    <input type="submit">
-  </form>
-  <h3>Trial Data Input area for each department</h3>
+          </select> -->
+
+  <!-- <h3>Trial Data Input area for each department</h3>
   <form class="checkPoint" action="/pulseCheck/createPulseCheck" method='POST'>
     <div>
       <div >
         <label>Please enter select todays date below:</label>
-        <input type="date" name="date" id="date" min="1980-01-01" max="2023-01-01" required>
+        <input type="date" name="date" id="date" min="1980-01-01" max="2025-01-01" required>
         <label>Trucks for the day:</label>
         <input type="text" class="form-control" placeholder="# Trucks" name="trucksTarget">
         <label>Trucks in Service at the moment:</label>
@@ -78,7 +108,7 @@
       </div>
     </div>
     <input type="submit" value="Save Changes">
-    </form>
+    </form> -->
 
     <div class="mt-lg">
         <h5>Your current tracked staffing</h5>

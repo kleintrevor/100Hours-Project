@@ -69,7 +69,7 @@ exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
     validationErrors.push({ msg: 'Please enter a valid email address.' });
-  if (!validator.isLength(req.body.password, { min: 8 }))
+  if (!validator.isLength(req.body.password, { min: 3 }))
     validationErrors.push({
       msg: 'Password must be at least 8 characters long',
     });
@@ -91,6 +91,7 @@ exports.postSignup = (req, res, next) => {
     department: req.body.department,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
+    shift: req.body.shift,
   });
 
   User.findOne(

@@ -15,29 +15,73 @@ module.exports = {
       console.log(err);
     }
   },
+  
   createPulseCheck: async (req, res) => {
 
     try {
-      await PulseCheck.create({
-        userId: req.user.id,
-        departmentId: req.user.department,
-        date: req.body.date,
-        targetStaffingLevels: req.body.targetStaffingLevels,
-        currentStaffingLevels: req.body.currentStaffingLevels,
-        complexTime: req.body.complexTime,
-        complexNumber: req.body.complexNumber,
-        trucksTarget: req.body.trucksTarget,
-        trucksInService: req.body.trucksInService,
-        supplyRoomDelivery: req.body.supplyRoomDelivery ? true : false,
-        warehouseDelivery: req.body.warehouseDelivery  ? true : false,
-        icer: req.body.icer ? true : false,
-        flightChecker: req.body.flightChecker  ? true : false,
-        qcp: req.body.qcp  ? true : false,
-        mpIds: req.body.mpIds ? true : false,
-        supplyTruck: req.body.supplyTruck ? true : false,
-        rampExchangeTruck: req.body.rampExchangeTruck ? true : false,
-        tempIceTrailer: req.body.tempIceTrailer ? true : false,
-        tempCoolers: req.body.tempCoolers ? true : false,
+      const {
+        // department,
+        complexTimeActual, 
+        complexTimeTarget,
+        attendanceActual, 
+        attendanceTarget,
+        trucksInServiceActual, 
+        trucksInServiceTarget,
+        // supplyRoomDelivery,
+        // warehouseDelivery,
+        // icer,
+        // flightChecker,
+        // qcp,
+        // mpIDS,
+        // supplyTruck,
+        // rampExchange,
+        // tempIceTrailer,
+        // tempCoolers
+      } = req.body;
+
+    const user = req.session.user;
+
+       // Create a new data entry object with validated data
+    const newPulseCheck = new PulseCheck({
+      // user,
+      // department,
+      complexTimeActual, 
+      complexTimeTarget,
+      attendanceActual, 
+      attendanceTarget,
+      trucksInServiceActual, 
+      trucksInServiceTarget,
+      // supplyRoomDelivery,
+      // warehouseDelivery,
+      // icer,
+      // flightChecker,
+      // qcp,
+      // mpIDS,
+      // supplyTruck,
+      // rampExchange,
+      // tempIceTrailer,
+      // tempCoolers
+    });
+     
+      await newPulseCheck.save({
+        // userId: req.user.id,
+        // department: req.user.department,
+        complexTimeActual, 
+        complexTimeTarget,
+        attendanceActual, 
+        attendanceTarget,
+        trucksInServiceActual, 
+        trucksInServiceTarget,
+        // supplyRoomDelivery,
+        // warehouseDelivery,
+        // icer,
+        // flightChecker,
+        // qcp,
+        // mpIDS,
+        // supplyTruck,
+        // rampExchange,
+        // tempIceTrailer,
+        // tempCoolers
       });
       console.log('Pulse check has been entered!');
       res.redirect('/pulseCheck');
