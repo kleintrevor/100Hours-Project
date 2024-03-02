@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const PulseCheckSchema = new mongoose.Schema({
-  // date: {
-  //   type: Date,
-  //   required: true,
-  // },
+  date: {
+    type: Date,
+    required: true,
+  },
   userID: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,

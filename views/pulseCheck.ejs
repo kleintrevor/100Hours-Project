@@ -9,7 +9,7 @@
 
   <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
     <label>Please enter select todays date below:</label>
-        <input type="date" name="date" id="date" min="1980-01-01" max="2025-01-01" required>
+      <input type="date" name="date" id="date" min="1980-01-01" max="2025-01-01" required>
     <label for="attendanceTarget">Attendance (Target):</label>
       <input type="number" name="attendanceTarget" id="attendanceTarget" required>
     <label for="attendanceActual">Attendance (Actual):</label>
@@ -40,7 +40,8 @@
     <input type="hidden" name="userId" value="<%= user._id %>">
     <input type="hidden" name="department" value="<%= user.department %>">
     <input type="hidden" name="shift" value="<%= user.shift %>">
-    <input type="submit">
+
+    <button type="submit">Submit Pulse Check</button>
   </form>
     <!-- <label>Enter your target staffing levels:</label>
         <input class="staffing" type="text" placeholder="Staffing #" name='targetStaffingLevels'> -->
@@ -112,7 +113,7 @@
     <input type="submit" value="Save Changes">
     </form> -->
 
-    <div class="mt-lg">
+    <!-- <div class="mt-lg">
         <h5>Your current tracked staffing</h5>
         <ul class="tracked-weights">
             <% pulseCheck.forEach( el => { %> 
@@ -123,7 +124,7 @@
                     </li>
             <% }) %>    
         </ul>
-    </div>
+    </div> -->
 <!-- 
           <div class="d-grid mt-3">
           <button type="submit" class="btn btn-danger">Submit</button>

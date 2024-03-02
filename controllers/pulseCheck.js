@@ -1,4 +1,5 @@
 const PulseCheck = require('../models/PulseCheck');
+const FeedItem = require('../models/FeedItem');
 
 module.exports = {
   getPulseChecks: async (req, res) => {
@@ -20,6 +21,7 @@ module.exports = {
 
     try {
       const {
+        date,
         complexTimeActual, 
         complexTimeTarget,
         attendanceActual, 
@@ -44,6 +46,7 @@ module.exports = {
 
        // Create a new data entry object with validated data
     const newPulseCheck = new PulseCheck({
+      date,
       userID,
       departmentID,
       shift,
@@ -66,6 +69,27 @@ module.exports = {
     });
      
       await newPulseCheck.save();
+
+    console.log("data saved, see below")
+    console.log(newPulseCheck)
+    
+    const newFeedItem = new FeedItem({
+      // ... FeedItem properties, including:
+      pulseCheck: newPulseCheck._id,   // Link to the created PulseCheck
+      date,
+      userId: req.user._id,            // Assuming user ID is available
+      department: req.body.department, // Extracted from request or PulseCheck
+      shift: req.body.shift,  
+      complexTimeActual, 
+      complexTimeTarget,
+      attendanceActual, 
+      attendanceTarget,
+      trucksInServiceActual, 
+      trucksInServiceTarget,       // Extracted from request or PulseCheck
+      // ... other FeedItem properties
+    });
+    await newFeedItem.save();
+
       console.log('Pulse check has been entered!');
       res.redirect('/pulseCheck');
     } catch (err) {

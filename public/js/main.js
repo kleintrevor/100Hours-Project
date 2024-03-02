@@ -6,6 +6,33 @@ Array.from(cells).forEach((el) => {
   el.addEventListener('click', deletePulseCheck);
 });
 
+// handle creation of both pulsecheck data and feeditem data with one button press
+const form = document.querySelector('.staffing');
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault(); // Prevent default form submission behavior
+
+  try {
+    const response = await fetch('/pulseCheck/createPulseCheck', {
+      method: 'POST',
+      body: new FormData(form), // Serialize form data and send as POST body
+    });
+
+    if (response.ok) {
+      // Handle successful creation of pulseCheck and feedItem
+      const data = await response.json();
+      console.log('Success:', data);
+      // Update UI or display success message accordingly
+    } else {
+      console.error('Error:', response.statusText);
+      // Handle potential errors during data saving
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    // Handle general errors in the process
+  }
+});
+
 // Array.from(weightItem).forEach((el) => {
 //   el.addEventListener('click', markComplete);
 // });

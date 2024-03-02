@@ -9,9 +9,11 @@ This will effectively allow an additional 30 minutes of availability on the MoDâ
 
 <h2>Things to add in the future:</h2>
 
-- sort output by department for display on grid
-- set up database schema for each department
+- sort output displayed on the feed by date and shift
+- add search function to search through pulsecheck information for display
+- change visablility of pulsecheck data entry by department, keeping with each departments required reporting
+- add admin control panel
 - polish DOM
-- role authentication based on department of user
-- update with react
+- update feed to be a live display
+
 

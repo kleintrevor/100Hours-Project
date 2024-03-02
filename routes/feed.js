@@ -5,7 +5,7 @@ const { ensureAuth } = require('../middleware/auth');
 
 
 router.get('/feed', ensureAuth, feedController.getFeed);
-router.post('/feed', feedController.createFeedItem);
+// router.post('/createFeedItem', ensureAuth, feedController.createFeedItem);
 
 
 module.exports = router;

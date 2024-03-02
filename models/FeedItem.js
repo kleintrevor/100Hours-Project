@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 
 const FeedItemSchema = new mongoose.Schema({
-  userID: {
+  date: {
+    type: Date,
+    required: true,
+  },
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true
@@ -11,9 +15,18 @@ const FeedItemSchema = new mongoose.Schema({
     ref: 'PulseCheck',
     required: true
   },
-  department: { type: String, required: true },
-  shift: { type: String, required: true },
-  createdAt: { type: Date, default: Date.now },
+  department: { 
+    type: String, 
+    required: true 
+  },
+  shift: { 
+    type: String, 
+    required: true 
+  },
+  createdAt: { 
+    type: Date, 
+    default: Date.now 
+  },
   complexTimeActual: { 
     type: String, 
     required: true 

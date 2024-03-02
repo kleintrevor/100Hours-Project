@@ -20,7 +20,7 @@
             <% for (const entry of locals.feedItems) { %>
               <tr>
                 <td><%= entry.department %></td>
-                <td><%= entry.user.shift %></td>
+                <td><%= entry.shift %></td>
                 <td><%= entry.attendanceActual + " / " + entry.attendanceTarget %></td>
                 <td><%= entry.trucksInServiceActual + " / " + entry.trucksInServiceTarget %></td>
                 <td>
