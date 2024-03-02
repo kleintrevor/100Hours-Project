@@ -13,10 +13,6 @@ const UserSchema = new mongoose.Schema({
   
   password: String,
 
-  department: { 
-    type: String, 
-    unique: true 
-  },
   accountCreated: { 
     type: Date, 
     default: Date.now 
@@ -34,7 +30,7 @@ const UserSchema = new mongoose.Schema({
   shift: {
       type: String,
       required: true,
-      // enum: ['AM', 'PM']
+      //enum: ['AM', 'PM']
   },
 });
 

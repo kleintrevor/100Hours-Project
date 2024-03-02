@@ -5,14 +5,19 @@ const PulseCheckSchema = new mongoose.Schema({
   //   type: Date,
   //   required: true,
   // },
-  // userId: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   required: true,
-  // },  
-  // department: {
-  //   type: String,
-  //   required: true,
-  // },
+  userID: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+  },  
+  departmentID: {
+    type: String,
+    required: true,
+  },
+  shift: {
+    type: String,
+    required: true,
+    //enum: ['AM', 'PM']
+},
   complexTimeActual: { 
     type: String, 
     required: true 

@@ -37,7 +37,9 @@
       <label><input type="checkbox" name="tempCoolers" id="tempCoolers">Temp Check Coolers</label>
     </div>  -->
     <br>
-
+    <input type="hidden" name="userId" value="<%= user._id %>">
+    <input type="hidden" name="department" value="<%= user.department %>">
+    <input type="hidden" name="shift" value="<%= user.shift %>">
     <input type="submit">
   </form>
     <!-- <label>Enter your target staffing levels:</label>

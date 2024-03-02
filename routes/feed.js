@@ -4,12 +4,8 @@ const feedController = require('../controllers/feed');
 const { ensureAuth } = require('../middleware/auth');
 
 
-
-
-
 router.get('/feed', ensureAuth, feedController.getFeed);
-
-
+router.post('/feed', feedController.createFeedItem);
 
 
 module.exports = router;
