@@ -39,8 +39,20 @@ const FeedItemSchema = new mongoose.Schema({
   attendanceTarget: { type: Number, required: true },
   trucksInServiceActual: { type: Number, required: true },
   trucksInServiceTarget: { type: Number, required: true },
-  // Additional properties specific to feed display 
-  // ...
+  attendanceActual: { completed: false },
+  attendanceTarget: { completed: false },
+  trucksInServiceActual: { completed: false },
+  trucksInServiceTarget: { completed: false },
+  supplyRoomDelivery: { completed: false },
+  warehouseDelivery: { completed: false },
+  icer: { completed: false },
+  flightChecker: { completed: false },
+  qcp: { completed: false },
+  mpIDS: { completed: false },
+  supplyTruck: { completed: false },
+  rampExchange: { completed: false },
+  tempIceTrailer: { completed: false },
+  tempCoolers: { completed: false }
 });
 
 module.exports = mongoose.model('FeedItem', FeedItemSchema);
