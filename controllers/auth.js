@@ -1,6 +1,7 @@
 const passport = require('passport');
 const validator = require('validator');
 const User = require('../models/User');
+// const Department = require('../models/Department');
 
 exports.getLogin = (req, res) => {
   if (req.user) {
@@ -45,17 +46,23 @@ exports.postLogin = (req, res, next) => {
 };
 
 exports.logout = (req, res) => {
-  req.logout(() => {
-    console.log('User has logged out.');
-  });
-  req.session.destroy((err) => {
-    if (err)
-      console.log('Error : Failed to destroy the session during logout.', err);
-    req.user = null;
-    res.redirect('/');
-  });
-};
+  req.logout(req, (err) => {
+    if (err) {
+      console.error('Error logging out:', err);
+      return res.status(500).send("Error logging out");
+    }
 
+    req.session.destroy((err) => {
+      if (err) {
+        console.error('Error destroying session:', err);
+        return res.status(500).send("Error logging out");
+      }
+
+      console.log('User has logged out.');
+      res.redirect('/');
+        });
+      });
+    };
 exports.getSignup = (req, res) => {
   if (req.user) {
     return res.redirect('/pulseCheck');
@@ -65,7 +72,7 @@ exports.getSignup = (req, res) => {
   });
 };
 
-exports.postSignup = (req, res, next) => {
+exports.postSignup = async (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
     validationErrors.push({ msg: 'Please enter a valid email address.' });
@@ -84,6 +91,12 @@ exports.postSignup = (req, res, next) => {
     gmail_remove_dots: false,
   });
 
+  // const department = await Department.findOne({ name: req.body.department });
+  //   if (!department) {
+  //   const newDepartment = await Department.create({ name: req.body.department });
+  //   department = newDepartment;
+  //   }
+
   const user = new User({
     userName: req.body.userName,
     email: req.body.email,
@@ -93,6 +106,7 @@ exports.postSignup = (req, res, next) => {
     lastName: req.body.lastName,
     shift: req.body.shift,
   });
+
 
   User.findOne(
     { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
@@ -120,3 +134,4 @@ exports.postSignup = (req, res, next) => {
     }
   );
 };
+

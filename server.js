@@ -35,8 +35,7 @@ require('dotenv').config({ path: './config/.env' });
 // assign the db variable from line 8
 // })
 
-// Passport config
-require('./config/passport')(passport);
+
 
 connectDB();
 
@@ -64,6 +63,9 @@ app.use(
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Passport config
+require('./config/passport')(passport);
 
 app.use(flash());
 app.use(fileUpload());

@@ -25,12 +25,14 @@ const UserSchema = new mongoose.Schema({
   },
   department: {
     type: String,
-    required: true
+    required: true,
+    unique: false 
   },
   shift: {
       type: String,
       required: true,
-      //enum: ['AM', 'PM']
+      unique: false,
+      enum: ['AM', 'PM']
   },
 });
 

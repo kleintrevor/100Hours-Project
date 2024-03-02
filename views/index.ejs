@@ -1,50 +1,28 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
 
-  <body>
-    <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
-      <div class="alert alert-danger"><%= el.msg %></div>
-      <% }) %> <% } %> <% if (locals.messages.info) { %> <% messages.info.forEach(
-      el => { %>
-      <div class="alert alert-danger"><%= el.msg %></div>
-      <% }) %> <% } %>
-    <div class="login-page">
-      <div class="form">
-        <form action="/signup" method="POST" class="register-form">
-          <input type="text" name="firstName" placeholder="First Name" />
-          <input type="text" name="lastName" placeholder="Last Name" />
-          <input type="text" name="userName" placeholder="User Name" />
-          <input type="email" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="Password" />
-          <input type="password" name="confirmPassword" placeholder="Confirm Password"/>
-          <select name="shift" id="shift"  >
-            <option value="AM">AM</option>
-            <option value="PM">PM</option>
-          </select> 
-          <select name="department" id="department"  >
-            <option value="Make & Pack">Make & Pack</option>
-            <option value="Pick & Pack">Pick & Pack</option>
-            <option value="Wash & Pack">Wash & Pack</option>
-            <option value="Dock">Dock</option>
-            <option value="Seal">Seal</option>
-            <option value="Transportation">Transportation</option> 
-            <option value="MoD">Manager on Duty</option>
-          </select> 
-          <button>Submit</button>
-          <p class="message">Already registered? <a>Sign In</a></p>
-        </form>
+<body>
+  <section class="landing-page">
+    <h1>Welcome to [Your Application Name]!</h1>
+    <p>
+      [Describe your application in a concise and inviting way. What does it offer users?]
+    </p>
+    <button class="btn-primary">Learn More</button>
 
+    <% if (!user) { %>
+      <div class="login-signup-form">
+        <h3>Already have an account?</h3>
         <form action="/login" method="POST" class="login-form">
-          <input type="email" name="email" placeholder="Email" />
-          <input type="password" name="password" placeholder="Password" />
-          <button>login</button>
-          <p class="message">Not registered? <a>Create an account</a></p>
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+          <a href="/signup">Create Account</a>
         </form>
       </div>
-    </div>
+    <% } %>
+  </section>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
-</html>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
 <%- include('partials/footer') %>

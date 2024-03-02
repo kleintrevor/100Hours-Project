@@ -4,16 +4,17 @@
 
 
 <body>
-    <h1>Data Feed</h1>
+    <h1>Pulse Check for <% locals.date %> </h1>
+
     <% if (locals.feedItems && locals.feedItems.length > 0) { %>
-        <table>
+        <table class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th>Department</th>
-              <th>Shift</th>
-              <th>Attendance (Actual/Target)</th>
-              <th>Trucks in Service (Actual/Target)</th>
-              <th>Complex Time (Actual/Target)</th>
+              <th scope="col">Department</th>
+              <th scope="col">Shift</th>
+              <th scope="col">Attendance (Actual/Target)</th>
+              <th scope="col">Trucks in Service (Actual/Target)</th>
+              <th scope="col">Complex Time (Actual/Target)</th>
             </tr>
           </thead>
           <tbody>
@@ -21,11 +22,9 @@
               <tr>
                 <td><%= entry.department %></td>
                 <td><%= entry.shift %></td>
-                <td><%= entry.attendanceActual + " / " + entry.attendanceTarget %></td>
-                <td><%= entry.trucksInServiceActual + " / " + entry.trucksInServiceTarget %></td>
-                <td>
-                  <%= entry.complexTimeActual + " / " + entry.complexTimeTarget %>
-                </td>
+                <td class="text-center"><%= entry.attendanceActual + " / " + entry.attendanceTarget %></td>
+                <td class="text-center"><%= entry.trucksInServiceActual + " / " + entry.trucksInServiceTarget %></td>
+                <td class="text-center"><%= entry.complexTimeActual + " / " + entry.complexTimeTarget %></td>
               </tr>
             <% } %>
           </tbody>
