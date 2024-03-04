@@ -65,11 +65,12 @@ ul > li {
 
 .task-checkboxes {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.task-checkboxes-col {
-  width: 45%;
+.task-checkboxes label {
+  width: 50%; /* Adjust width as needed */
+  margin-bottom: 1em; /* Optional spacing between rows */
 }
 
 .nav{

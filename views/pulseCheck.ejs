@@ -2,7 +2,10 @@
 <%- include('partials/header') %>
 
 <body>
-
+  <% if (user) { %>
+    <h3>Hello <%= user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1) %>, please enter the pulse check data for the 
+    (<%= user.shift %> - <%= user.department %>) department:</h3>
+    <% } %>
 
   <form class="staffing" action="/pulseCheck/createPulseCheck" method='POST'>
     <label>Please enter select todays date below:</label>
@@ -18,56 +21,43 @@
     <label>Trucks for the day:</label>
       <input type="text" class="form-control" placeholder="# Trucks" name="trucksInServiceTarget">
     <label>Trucks in Service at the moment:</label>
+
       <input type="text" class="form-control" placeholder="# Trucks in service" name="trucksInServiceActual">
-      <div class="task-checkboxes-col">
+      <div class="task-checkboxes">
         <label for="supplyRoomDeliveryCompleted">
-          <input type="checkbox" id="supplyRoomDeliveryCompleted" name="supplyRoomDeliveryCompleted" value="completed"> Supply Room Delivery
+          <input type="radio" id="supplyRoomDeliveryCompleted" name="supplyRoomDeliveryCompleted" value="completed"> Supply Room Delivery
         </label>
         <label for="warehouseDeliveryCompleted">
-          <input type="checkbox" id="warehouseDeliveryCompleted" name="warehouseDeliveryCompleted" value="completed"> 501 Warehouse Delivery
+          <input type="radio" id="warehouseDeliveryCompleted" name="warehouseDeliveryCompleted" value="completed"> 501 Warehouse Delivery
         </label>
         <label for="icerCompleted">
-          <input type="checkbox" id="icerCompleted" name="icerCompleted" value="completed"> Icer
+          <input type="radio" id="icerCompleted" name="icerCompleted" value="completed"> Icer
         </label>
         <label for="flightCheckerCompleted">
-          <input type="checkbox" id="flightCheckerCompleted" name="flightCheckerCompleted" value="completed"> Flight Checker
+          <input type="radio" id="flightCheckerCompleted" name="flightCheckerCompleted" value="completed"> Flight Checker
         </label>
         <label for="qcpCompleted">
-          <input type="checkbox" id="qcpCompleted" name="qcpCompleted" value="completed"> QCP
+          <input type="radio" id="qcpCompleted" name="qcpCompleted" value="completed"> QCP
         </label>
       </div>
-      <div class="task-checkboxes-col">
+      <div class="task-checkboxes">
         <label for="mpIDSCompleted">
-          <input type="checkbox" id="mpIDSCompleted" name="mpIDSCompleted" value="completed"> Supply Room Delivery
+          <input type="radio" id="mpIDSCompleted" name="mpIDSCompleted" value="completed"> Make & Pack IDS Delivered
         </label>
         <label for="supplyTruckCompleted">
-          <input type="checkbox" id="supplyTruckCompleted" name="supplyTruckCompleted" value="completed"> Supply Truck Delivered
+          <input type="radio" id="supplyTruckCompleted" name="supplyTruckCompleted" value="completed"> Supply Truck Delivered
         </label>
         <label for="rampExchangeTruckcompleted">
-          <input type="checkbox" id="rampExchangeTruckCompleted" name="rampExchangeTruckCompleted" value="completed"> Ramp Exchange Truck
+          <input type="radio" id="rampExchangeTruckCompleted" name="rampExchangeTruckCompleted" value="completed"> Ramp Exchange Truck
         </label>
         <label for="tempTrailerCompleted">
-          <input type="checkbox" id="tempTrailerCompleted" name="tempTrailerCompleted" value="completed"> Freezer Trailer Temp Check
+          <input type="radio" id="tempTrailerCompleted" name="tempTrailerCompleted" value="completed"> Freezer Trailer Temp Check
         </label>
         <label for="tempCoolersCompleted">
-          <input type="checkbox" id="tempCoolersCompleted" name="tempCoolersCompleted" value="completed"> All Coolers Temp Check
+          <input type="radio" id="tempCoolersCompleted" name="tempCoolersCompleted" value="completed"> All Coolers Temp Check
         </label>
       </div>
     </div>
-    <!-- <div class="checkboxes-col">
-      <label><input type="checkbox" name="supplyRoomDelivery" id="supplyRoomDelivery">Supply Room Delivery</label>
-      <label><input type="checkbox" name="warehouseDelivery" id="warehouseDelivery">501 Warehouse Delivery</label>
-      <label><input type="checkbox" name="icer" id="icer">Icer</label>
-      <label><input type="checkbox" name="flight checker" id="flightChecker">Flight Checker</label>
-      <label><input type="checkbox" name="qcp" id="qcp">QCP</label>
-    </div>
-    <div class="checkboxes-col">
-      <label><input type="checkbox" name="mpIds" id="mpIds" >M&P IDS</label>
-      <label><input type="checkbox" name="supplyTruck" id="supplyTruck">Supply Truck</label>
-      <label><input type="checkbox" name="rampExchangeTruck" id="rampExchangeTruck">Ramp Exchange Truck</label>
-      <label><input type="checkbox" name="tempIceTrailer" id="tempIceTrailer">Temp Check Ice Trailer</label>
-      <label><input type="checkbox" name="tempCoolers" id="tempCoolers">Temp Check Coolers</label>
-    </div>  -->
     <br>
     <input type="hidden" name="userId" value="<%= user._id %>">
     <input type="hidden" name="department" value="<%= user.department %>">

@@ -32,6 +32,8 @@ const PulseCheckSchema = new mongoose.Schema({
   trucksInServiceTarget: { completed: false },
   supplyRoomDelivery: { completed: false },
   warehouseDelivery: { completed: false },
+  supplyRoomDelivery: { completed: false },
+  warehouseDelivery: { completed: false },
   icer: { completed: false },
   flightChecker: { completed: false },
   qcp: { completed: false },

@@ -28,16 +28,16 @@ module.exports = {
         attendanceTarget,
         trucksInServiceActual, 
         trucksInServiceTarget,
-        // supplyRoomDelivery,
-        // warehouseDelivery,
-        // icer,
-        // flightChecker,
-        // qcp,
-        // mpIDS,
-        // supplyTruck,
-        // rampExchange,
-        // tempIceTrailer,
-        // tempCoolers
+        supplyRoomDelivery,
+        warehouseDelivery,
+        icer,
+        flightChecker,
+        qcp,
+        mpIDS,
+        supplyTruck,
+        rampExchange,
+        tempIceTrailer,
+        tempCoolers
       } = req.body;
 
     const userID = req.user._id;
@@ -56,16 +56,16 @@ module.exports = {
       attendanceTarget,
       trucksInServiceActual, 
       trucksInServiceTarget,
-      // supplyRoomDelivery,
-      // warehouseDelivery,
-      // icer,
-      // flightChecker,
-      // qcp,
-      // mpIDS,
-      // supplyTruck,
-      // rampExchange,
-      // tempIceTrailer,
-      // tempCoolers
+      supplyRoomDelivery,
+      warehouseDelivery,
+      icer,
+      flightChecker,
+      qcp,
+      mpIDS,
+      supplyTruck,
+      rampExchange,
+      tempIceTrailer,
+      tempCoolers
     });
      
       await newPulseCheck.save();
@@ -85,8 +85,17 @@ module.exports = {
       attendanceActual, 
       attendanceTarget,
       trucksInServiceActual, 
-      trucksInServiceTarget,       // Extracted from request or PulseCheck
-      // ... other FeedItem properties
+      trucksInServiceTarget,  
+      supplyRoomDelivery,
+      warehouseDelivery,
+      icer,
+      flightChecker,
+      qcp,
+      mpIDS,
+      supplyTruck,
+      rampExchange,
+      tempIceTrail,
+      tempCoolers     // Extracted from request or PulseCheck
     });
     await newFeedItem.save();
 
